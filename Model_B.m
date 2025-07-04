@@ -4,13 +4,10 @@ load(char(pATh + "ReSuLTs/BoOTStrAp_DHS.mat"),'LT','iNFo','xE');
 fileattrib(pATh + "ReSuLTs")
 RESolUTioN              = 300;
 
-N                       = 5000;
-iNFo.small(iNFo.N < N)  = 1;
-sEL                     = find(iNFo.exclusion == 0 & iNFo.small == 0);
+sEL                     = (iNFo.R == '1. Model B' | iNFo.R == '2. Rest of the World');
 LT                      = LT{3}(sEL,:);
 iNFo                    = iNFo(sEL,:);
-sEL                     = ismember(iNFo.SubRegion,["South Asia";"Western Africa";"Middle Africa";"Eastern Africa"]) & ~ismember(iNFo.country,["Maldives";"Pakistan"]);
-iNFo.ModelB(sEL)        = 1;
+sEL                     = (iNFo.R == '1. Model B');
 
 Z                       = 2;
 ReG                     = table({'q'},{'0'},{'60m'},{'q'},Z);
@@ -52,10 +49,10 @@ B{1}                    = Coef_fast(qS(:,sEL),x,ReG);
 Beta{2}                 = B;
 
 iN                      = iNFo(sEL,:); 
-J                       = [10 50 240];
+J                       = [10 23 50 240];
 for j = 1:numel(J)
     smoothingLT(q(:,J(j)),xE,sR,100,10,0.25,p,P);
-    exportgraphics(gcf,char(pATh + "ReSuLTs/smoothing example " + iN.country(J(j)) + " " + iN.fILe(J(j)) + ".png"),'Resolution',RESolUTioN);
+    exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/smoothing example " + iN.country(J(j)) + " " + iN.fILe(J(j)) + ".png"),'Resolution',RESolUTioN);
 end
 clear iN J
 
@@ -159,7 +156,7 @@ plot([-1 3],[1 1],'LineWidth',1.0,'color','k');
 plot([1 1],[-1 3],'LineWidth',1.0,'color','k');
 scatter(sCaTTeR{2}(:,1),sCaTTeR{2}(:,2),7.5,'filled','MarkerFaceColor',coloR{4},'MarkerFaceAlpha',.5)
 title('$\textrm{Model B}$','Interpreter','latex','FontSize',11*z);
-exportgraphics(gcf,char(pATh + "ReSuLTs/scatters.png"),'Resolution',RESolUTioN);
+exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/scatters.png"),'Resolution',RESolUTioN);
 
 
 
@@ -278,7 +275,7 @@ for i = 1:numel(group)*numel(Beta)
         legend(lEGeND{r},'Interpreter','latex','FontSize',8*z,'FontAngle','oblique','Location','southoutside','NumColumns',2,'Box','off');
     end
 end
-exportgraphics(gcf,char(pATh + "ReSuLTs/undetermined outcomes.png"),'Resolution',RESolUTioN);
+exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/undetermined outcomes.png"),'Resolution',RESolUTioN);
 
 
 group{4}          = {(1:size(Qm{1},2))'};
@@ -336,86 +333,97 @@ for h = 1:numel(Region)
     taBLeK.LB(h)      = round(prctile(k(s,1),2.5),4);
     taBLeK.UB(h)      = round(prctile(k(s,1),97.5),4);
 end
+
+
 s                 = group{1}{2};
 k(s,2:3)          = 0;
+lISt              = ["smooth";"raw"];
+for h = 1:numel(lISt)
+    for i = 1:numel(group{1})
 
-for i = 1:numel(group{1})
-    q                 = QM{1}(:,group{1}{i});
-    init              = Set(q,x,{F,ReG});
-    init              = [log(init{2}),zeros(size(init{2}))];
-    
-    if ~isequal(std(k(group{1}{i},2)),0)
-        pOIntS{1,1}      = {'$\mathit{q}\mathrm{(5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{median}$'};
-        pOIntS{8,1}      = {'$\mathit{q}\mathrm{(28}\mathit{d}\mathrm{,5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{median}$'};
-    else
-        pOIntS{1,1}      = {char("$\mathit{q}\mathrm{(5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{" + sprintf('%0.4f',k(group{1}{i}(1),2)) + "}$")};
-        pOIntS{8,1}      = {char("$\mathit{q}\mathrm{(28}\mathit{d}\mathrm{,5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{" + sprintf('%0.4f',k(group{1}{i}(1),2)) + "}$")};
-    end
-        
-    for j = 1:numel(mOD)
-        if ismember(j,[1 8])
-            init(:,2) = k(group{1}{i},2);
-        else
-            init(:,2) = 0;
+        if isequal(lISt(h),'smooth')
+            q                = qS(:,group{1}{i});
+        elseif isequal(lISt(h),'raw')
+            q                = QM{1}(:,group{1}{i});
         end
-
-        match            = Set(q,x,mOD{j},init);
-        [~,qp]           = Match(match,B{i},x,mOD{j},init,250);
-        SE               = ismember(F(:,1:end - 1),mOD{j}{2});
-        match            = Set(q,x,{F,[]});
-        mATcH            = Set(qp,x,{F,[]});
-        y                = log(match{1}(:,~SE)./mATcH{1}(:,~SE));
-        
-        [N,R]            = size(y);
-        priorPhi         = {ones(1,R)*10^-2,ones(1,R)*10^-2};
-        X                = ones(N,1);
-        XX               = X'*X;
-        Xy               = X'*y;
-        yy               = y'*y;
-        priorBi          = {pinv(XX)*Xy;ones(1,R)*10^-4};
-
-        Bi               = zeros(1,R);
-        Phi              = priorPhi{1};
-        warmup           = 2500;
-        iterations       = 10000;
-
-        sample.Bi        = NaN(iterations,numel(SE));
-        sample.Bi(:,SE)  = 0;
-        sample.Phi       = NaN(iterations,numel(SE));
-        sample.Phi(:,SE) = Inf;
-        sample.MSE       = NaN(iterations,numel(SE));
-        sample.MSE(:,SE) = 0;
-        for r = 1:iterations + warmup
-            EE        = diag(yy - Xy'*Bi - Bi'*Xy + Bi'*XX*Bi)';
-            V         = 1./(Phi*XX + priorBi{2});
-            M         = V.*(Phi.*Xy + priorBi{2}.*priorBi{1});
-            Bi        = mvnrnd(M,V);
-            Phi       = gamrnd(priorPhi{1} + N/2,1./(priorPhi{2} + 1/2*EE));
             
-            if r > warmup
-                sample.Bi(r - warmup,~SE)  = Bi;
-                sample.Phi(r - warmup,~SE) = Phi;
-                sample.MSE(r - warmup,~SE) = Bi.^2 + 1./Phi;
-            end
+        init              = Set(q,x,{F,ReG});
+        init              = [log(init{2}),zeros(size(init{2}))];
+        
+        if ~isequal(std(k(group{1}{i},2)),0)
+            pOIntS{1,1}      = {'$\mathit{q}\mathrm{(5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{regional\,median}$'};
+            pOIntS{8,1}      = {'$\mathit{q}\mathrm{(28}\mathit{d}\mathrm{,5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{regional\,median}$'};
+        else
+            pOIntS{1,1}      = {char("$\mathit{q}\mathrm{(5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{" + sprintf('%0.4f',k(group{1}{i}(1),2)) + "}$")};
+            pOIntS{8,1}      = {char("$\mathit{q}\mathrm{(28}\mathit{d}\mathrm{,5}\mathit{y}\mathrm{)\,only,\,}\mathit{k=\,}\mathrm{" + sprintf('%0.4f',k(group{1}{i}(1),2)) + "}$")};
         end
-        tABle{i}.RMSE(j,:)      = [prctile(sqrt(sample.MSE*W),[50 2.5 97.5]) mat2cell(prctile(sqrt(sample.MSE(:,[4 15 22])),[50 2.5 97.5])',ones(3,1),3)'];
-        tABle{i}.Bias(j,:)      = [prctile(sample.Bi*W,[50 2.5 97.5]) mat2cell(prctile(sample.Bi(:,[4 15 22]),[50 2.5 97.5])',ones(3,1),3)'];
-        tABle{i}.Precision(j,:) = [prctile(1./(1./sample.Phi*W),[50 2.5 97.5]) mat2cell(prctile(sample.Phi(:,[4 15 22]),[50 2.5 97.5])',ones(3,1),3)'];
-        clear sample 
-    end
-
-    tABle{i}.Precision     = cell2mat(tABle{i}.Precision);
-    tABle{i}.Precision     = mat2cell(tABle{i}.Precision,ones(size(tABle{i}.Bias,1),1),ones(1,size(tABle{i}.Bias,2))*3);
-    nOTe                   = {'$\textrm{Entry points}$',char("$\mathrm{p50/}\mathit{[p2.5,p97.5]} \textrm{ of the posterior predictive distribution. Gibbs sampler algorithm, iterated 10,000 times after 2,500 rounds of warm-up. Not significant at 5\%, in pink.}\textbf{ " + lEGeND{1}{i} + ".}$")};
-    nOTe                   = {'$\textrm{Entry points}$',''};
-    tABleBAyEs(sEt,vARs,foRMaT,lABs,nOTe,pOIntS,cell2mat([tABle{i}.RMSE tABle{i}.Bias tABle{i}.Precision]),0.125,0.075,[]);
-    exportgraphics(gcf,char(pATh + "ReSuLTs/RMSE (Group " + i + ").png"),'Resolution',RESolUTioN);
+            
+        for j = 1:numel(mOD)
+            if ismember(j,[1 8])
+                init(:,2) = k(group{1}{i},2);
+            else
+                init(:,2) = 0;
+            end
     
-    nOTe                   = {'$\textrm{Entry points}$',char("$\mathrm{p50/}\mathit{[p2.5,p97.5]} \textrm{ of the posterior predictive distribution.}\textbf{ " + lEGeND{1}{i} + ".}$")};
-    nOTe                   = {'$\textrm{Entry points}$',''};
-    tABleBAyEs(sEt,vARs(1),foRMaT,lABs,nOTe,pOIntS,cell2mat(tABle{i}.RMSE),0.125,0.075,[]);
-    exportgraphics(gcf,char(pATh + "ReSuLTs/RMSE (Group " + i + " short).png"),'Resolution',RESolUTioN);
+            match            = Set(q,x,mOD{j},init);
+            [~,qp]           = Match(match,B{i},x,mOD{j},init,250);
+            SE               = ismember(F(:,1:end - 1),mOD{j}{2});
+            match            = Set(q,x,{F,[]});
+            mATcH            = Set(qp,x,{F,[]});
+            y                = log(match{1}(:,~SE)./mATcH{1}(:,~SE));
+            
+            [N,R]            = size(y);
+            priorPhi         = {ones(1,R)*10^-2,ones(1,R)*10^-2};
+            X                = ones(N,1);
+            XX               = X'*X;
+            Xy               = X'*y;
+            yy               = y'*y;
+            priorBi          = {pinv(XX)*Xy;ones(1,R)*10^-4};
+    
+            Bi               = zeros(1,R);
+            Phi              = priorPhi{1};
+            warmup           = 2500;
+            iterations       = 10000;
+    
+            sample.Bi        = NaN(iterations,numel(SE));
+            sample.Bi(:,SE)  = 0;
+            sample.Phi       = NaN(iterations,numel(SE));
+            sample.Phi(:,SE) = Inf;
+            sample.MSE       = NaN(iterations,numel(SE));
+            sample.MSE(:,SE) = 0;
+            for r = 1:iterations + warmup
+                EE        = diag(yy - Xy'*Bi - Bi'*Xy + Bi'*XX*Bi)';
+                V         = 1./(Phi*XX + priorBi{2});
+                M         = V.*(Phi.*Xy + priorBi{2}.*priorBi{1});
+                Bi        = mvnrnd(M,V);
+                Phi       = gamrnd(priorPhi{1} + N/2,1./(priorPhi{2} + 1/2*EE));
+                
+                if r > warmup
+                    sample.Bi(r - warmup,~SE)  = Bi;
+                    sample.Phi(r - warmup,~SE) = Phi;
+                    sample.MSE(r - warmup,~SE) = Bi.^2 + 1./Phi;
+                end
+            end
+            tABle{i}.RMSE(j,:)      = [prctile(sqrt(sample.MSE*W),[50 2.5 97.5]) mat2cell(prctile(sqrt(sample.MSE(:,[4 15 22])),[50 2.5 97.5])',ones(3,1),3)'];
+            tABle{i}.Bias(j,:)      = [prctile(sample.Bi*W,[50 2.5 97.5]) mat2cell(prctile(sample.Bi(:,[4 15 22]),[50 2.5 97.5])',ones(3,1),3)'];
+            tABle{i}.Precision(j,:) = [prctile(1./(1./sample.Phi*W),[50 2.5 97.5]) mat2cell(prctile(sample.Phi(:,[4 15 22]),[50 2.5 97.5])',ones(3,1),3)'];
+            clear sample 
+        end
+    
+        tABle{i}.Precision     = cell2mat(tABle{i}.Precision);
+        tABle{i}.Precision     = mat2cell(tABle{i}.Precision,ones(size(tABle{i}.Bias,1),1),ones(1,size(tABle{i}.Bias,2))*3);
+        nOTe                   = {'$\textrm{Entry points}$',char("$\mathrm{p50/}\mathit{[p2.5,p97.5]} \textrm{ of the posterior predictive distribution. Gibbs sampler algorithm, iterated 10,000 times after 2,500 rounds of warm-up. Not significant at 5\%, in pink.}\textbf{ " + lEGeND{1}{i} + ".}$")};
+        nOTe                   = {'$\textrm{Entry points}$',''};
+        tABleBAyEs(sEt,vARs,foRMaT,lABs,nOTe,pOIntS,cell2mat([tABle{i}.RMSE tABle{i}.Bias tABle{i}.Precision]),0.145,0.075,[]);
+        exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/RMSE " + lISt(h) + " (Group " + i + ").png"),'Resolution',RESolUTioN);
+        
+        nOTe                   = {'$\textrm{Entry points}$',char("$\mathrm{p50/}\mathit{[p2.5,p97.5]} \textrm{ of the posterior predictive distribution.}\textbf{ " + lEGeND{1}{i} + ".}$")};
+        nOTe                   = {'$\textrm{Entry points}$',''};
+        tABleBAyEs(sEt,vARs(1),foRMaT,lABs,nOTe,pOIntS,cell2mat(tABle{i}.RMSE),0.145,0.075,[]);
+        exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/RMSE " + lISt(h) + " (Group " + i + " short).png"),'Resolution',RESolUTioN);
+    end
 end
+
 
 foRMaT            = {'%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f'};
 vARs              = {'$\mathrm{All\,}\mathit{q}\mathrm{(}\mathit{x}\mathrm{)}$','$\mathit{q}\mathrm{(7}\mathit{d}\mathrm{)}$','$\mathit{q}\mathrm{(28}\mathit{d}\mathrm{)}$','$\mathit{q}\mathrm{(3}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(6}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(12}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(48}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(5}\mathit{y}\mathrm{)}$'};
@@ -499,12 +507,12 @@ for i = 1:numel(group{1})
     nOTe                     = {'$\textrm{Parameters}$',char("$\mathrm{p50/}\mathit{[p2.5,p97.5]} \textrm{ of the posterior predictive distribution. Gibbs sampler algorithm, iterated 10,000 times after 2,500 rounds of warm-up. Not significant at 5\%, in pink.}\textbf{ " + lEGeND{1}{i} + ".}$")};
     nOTe                     = {'$\textrm{Parameters}$',''};
     tABleBAyEs(sEt,vARs,foRMaT,lABsII(1:end - 1),nOTe,pARAmeTeRS,cell2mat([tABleII{i}.RMSE tABleII{i}.Bias tABleII{i}.Precision]),0.125,0.075,[]);
-    exportgraphics(gcf,char(pATh + "ReSuLTs/smoothing (Group " + i + ").png"),'Resolution',RESolUTioN);
+    exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/smoothing (Group " + i + ").png"),'Resolution',RESolUTioN);
     
     nOTe                     = {'$\textrm{Parameters}$',char("$\mathrm{p50/}\mathit{[p2.5,p97.5]} \textrm{ of the posterior predictive distribution.}\textbf{ " + lEGeND{1}{i} + ".}$")};
     nOTe                     = {'$\textrm{Parameters}$',''};
     tABleBAyEs(sEt,vARs(1),foRMaT,lABsII(1:end - 1),nOTe,pARAmeTeRS,cell2mat(tABleII{i}.RMSE),0.125,0.075,[]);
-    exportgraphics(gcf,char(pATh + "ReSuLTs/smoothing (Group " + i + " short).png"),'Resolution',RESolUTioN);
+    exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/smoothing (Group " + i + " short).png"),'Resolution',RESolUTioN);
 end
 
 
@@ -515,14 +523,14 @@ axes1                    = axes('Parent',fi,'Position',[0.025 0.025 0.975 0.975]
 hold(axes1,'on');
 TL                       = tiledlayout(numel(knots),numel(lambda),'Padding','compact','TileSpacing','compact');
 mODlAB{1}                = '$\textrm{Model B (smooth)}$';
-mODlAB{2}                = '$\textrm{Model B (smooth), }\mathit{k}\mathrm{= -1}$';
-mODlAB{3}                = '$\textrm{Model B (smooth), }\mathit{k}\mathrm{= +1}$';
+mODlAB{2}                = '$\textrm{Model B (smooth), }\mathit{k\,}\mathrm{= -1}$';
+mODlAB{3}                = '$\textrm{Model B (smooth), }\mathit{k\,}\mathrm{= +1}$';
 mODlAB{4}                = '$\textrm{Model B (raw)}$';
-mODlAB{5}                = '$\textrm{Model B (raw), }\mathit{k}\mathrm{= -1}$';
-mODlAB{6}                = '$\textrm{Model B (raw), }\mathit{k}\mathrm{= +1}$';
+mODlAB{5}                = '$\textrm{Model B (raw), }\mathit{k\,}\mathrm{= -1}$';
+mODlAB{6}                = '$\textrm{Model B (raw), }\mathit{k\,}\mathrm{= +1}$';
 mODlAB{7}                = '$\textrm{Log-quadratic Model}$';
-mODlAB{8}                = '$\textrm{Log-quadratic Model, }\mathit{k}\mathrm{= -1}$';
-mODlAB{9}                = '$\textrm{Log-quadratic Model, }\mathit{k}\mathrm{= +1}$';
+mODlAB{8}                = '$\textrm{Log-quadratic Model, }\mathit{k\,}\mathrm{= -1}$';
+mODlAB{9}                = '$\textrm{Log-quadratic Model, }\mathit{k\,}\mathrm{= +1}$';
 
 for i = 1:numel(Bs) - 1
     nexttile(i)
@@ -615,13 +623,13 @@ for j = 1:numel(U5MR)
         ylim(yLim)
     end
     title(TL,char("$\mathrm{U5MR=" + U5MR(j) + "}$"),'Interpreter','latex','FontSize',12*z);
-    exportgraphics(gcf,char(pATh + "ReSuLTs/smoothing nMx, U5MR = " + U5MR(j) + ".png"),'Resolution',RESolUTioN);
+    exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/smoothing nMx, U5MR = " + U5MR(j) + ".png"),'Resolution',RESolUTioN);
 
     for i = 1:numel(Bs) - 1
         nexttile(i)
         xlim([-0.025 1.25])
     end    
-    exportgraphics(gcf,char(pATh + "ReSuLTs/smoothing nMx, U5MR = " + U5MR(j) + " close.png"),'Resolution',RESolUTioN);
+    exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/smoothing nMx, U5MR = " + U5MR(j) + " close.png"),'Resolution',RESolUTioN);
     
     for i = 1:numel(P)
         delete(P{i});
@@ -630,22 +638,33 @@ end
 
 
 
-q                 = QM{3};
-y                 = log(q(2:end,:)) - Beta{2}{1}(:,1:Z + 1)*log(q(end,:)).^((0:Z)');
-[N,R]             = size(y);
-X                 = Beta{2}{1}(:,Z + 2);
-W                 = diag(diff(x{1},1)/x{1}(end));
-XX                = X'*W*X;
-Xy                = X'*W*y;
-yy                = y'*W*y;
-priorBi           = {pinv(XX)*Xy;ones(1,R)*10^-4};
-priorPhi          = {ones(1,R)*10^-2,ones(1,R)*10^-2};
 
-Bi                = ones(1,R)*0;
-Phi               = ones(1,R)*10^-2;
-warmup            = 2500;
-iterations        = 10000;
+load(char(pATh + "ReSuLTs/BoOTStrAp_DHS.mat"),'LT','iNFo','xE');
+LT                      = LT{3};
+sEL                     = (iNFo.R == '1. Model B');
+nMx                     = cell2mat(LT(:,1))';
+nMx                     = cell2mat(mat2cell(prctile(nMx(2:end,:),50)',ones(numel(sEL),1)*size(LT{1,1},1))');
+q                       = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx,1))];
 
+ndx                     = q(2:end,:) - q(1:end - 1,:);
+nLx                     = min(ndx./nMx,diff(xE{1},1).*(1 - q(1:end - 1,:)));
+nMx                     = (I'*ndx)./(I'*nLx);
+q                       = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1},1).*nMx,1))];
+
+y                       = log(q(2:end,:)) - Beta{2}{1}(:,1:Z + 1)*log(q(end,:)).^((0:Z)');
+[N,R]                   = size(y);
+X                       = Beta{2}{1}(:,Z + 2);
+W                       = diag(diff(x{1},1)/x{1}(end));
+XX                      = X'*W*X;
+Xy                      = X'*W*y;
+yy                      = y'*W*y;
+priorBi                 = {pinv(XX)*Xy;ones(1,R)*10^-4};
+priorPhi                = {ones(1,R)*10^-2,ones(1,R)*10^-2};
+
+Bi                      = ones(1,R)*0;
+Phi                     = ones(1,R)*10^-2;
+warmup                  = 2500;
+iterations              = 10000;
 for r = 1:iterations + warmup
     EE       = diag(yy - Xy'*Bi - Bi'*Xy + Bi'*XX*Bi)';
     V        = 1./(Phi*XX + priorBi{2});
@@ -785,9 +804,11 @@ for j = 1:size(q,2)
     WX{end + 1} = legend(lEGeND,'Interpreter','latex','FontSize',9*z,'FontAngle','oblique','Location','southoutside','NumColumns',2,'Box','off');
     
     if ismember(j,find(sEL))
-        saveas(gcf,char(pATh + "ReSuLTs/figures/fig In " + find(find(sEL) == j) + " " + iNFo.country(j)),'png');
+        A            = char("00" + find(find(sEL) == j));
+        saveas(gcf,char(pATh + "ReSuLTs/figures/fig In " + A(end - 2:end) + " " + iNFo.country(j)),'png');
     else
-        saveas(gcf,char(pATh + "ReSuLTs/figures/fig Out " + sum(~ismember((1:j),find(sEL))) + " " + iNFo.country(j)),'png');
+        A            = char("00" + sum(~ismember((1:j),find(sEL))));
+        saveas(gcf,char(pATh + "ReSuLTs/figures/fig Out " + A(end - 2:end) + " " + iNFo.country(j)),'png');
     end
 
     for r = 1:numel(WX)

@@ -101,19 +101,29 @@ if R > 0
             LT{k}{i,4}        = exposure{k};
             clear nMx q
         end
-        iNFo.small(i)     = (min(LT{1}{i,2}(2,1),LT{2}{i,2}(2,1)) == 0);
+        iNFo.small(i)     = (min(LT{1}{i,2}(xE{2} == "7d",1),LT{2}{i,2}(xE{2} == "7d",1)) == 0);
         clear data d O D B mIn mAx w W wS j k p dATe T sEX exposure events sEL
     end
-    exclusion           = ["AF71";"AL71";"AM72";"BJ61";"DR41";"ES01";"GM61";"IA74";"IA7E-R12";"IA7E-R13";"IA7E-R15";"IA7E-R17";"MX01";"SL51";"SZ51";"TL71";"OS01";"MZ31";"ZW52";"KM61";"SNG0"];
-    sET                 = ismember(iNFo.fILe,exclusion);
-    iNFo.exclusion(sET) = 1;
-        
-    clear ans sET i exclusion redundant options
+    exclusion                   = ["AF71";"AL71";"AM72";"BJ61";"DR41";"ES01";"GM61";"IA74";"MX01";"SL51";"SZ51";"TL71";"OS01";"MZ31";"ZW52";"KM61";"SNG0"];
+    sET                         = ismember(iNFo.fILe,exclusion);
+    iNFo.exclusion(sET)         = 1;
+
+    N                           = 5000;
+    sMAll                       = ["IA7E-R12";"IA7E-R13";"IA7E-R15";"IA7E-R17"];
+    sET                         = ismember(iNFo.fILe,sMAll) | iNFo.N < N;
+    iNFo.small(sET)             = 1;
+
+    sEL                         = ismember(iNFo.SubRegion,["South Asia";"Western Africa";"Middle Africa";"Eastern Africa"]) & iNFo.small == 0 & ~ismember(iNFo.country,["Maldives";"Pakistan"]);
+    iNFo.R(sEL)                 = "1. Model B";
+    iNFo.R(~sEL)                = "2. Rest of the World";
+    iNFo.R(iNFo.small == 1)     = "3. Small sample";
+    iNFo.R(iNFo.exclusion == 1) = "4. Excluded";
+
+    clear ans sET sEL N sMAll i exclusion redundant options
     save(char(pATh + "ReSuLTs/BoOTStrAp_DHS.mat"));
 else
     load(char(pATh + "ReSuLTs/BoOTStrAp_DHS.mat"));
 end
-
 
 
 Z                           = 2;
@@ -140,13 +150,7 @@ for i = 1:order
     foRMaT{i}   = '%0.4f';
 end
 
-N                           = 5000;
-iNFo.small(iNFo.N < N)      = 1;
-sEL                         = ismember(iNFo.SubRegion,["South Asia";"Western Africa";"Middle Africa";"Eastern Africa"]) & iNFo.small == 0 & ~ismember(iNFo.country,["Maldives";"Pakistan"]);
-iNFo.R(sEL)                 = "1. Model B";
-iNFo.R(~sEL)                = "2. Rest of the World";
-iNFo.R(iNFo.small == 1)     = "3. Small sample";
-iNFo.R(iNFo.exclusion == 1) = "4. Excluded";
+
 
 Region                      = tabulate(iNFo.R);
 Region                      = sortrows(string(Region(:,1)));
@@ -190,26 +194,35 @@ for i = 1:numel(Region)
     tABlE(k + 1,:)    = table("Total","",sum(recode(tABlE.tables,NaN,0)),"","");
     lABs              = {num2cell(1:k) {k + 1}};
     tABleSuMm({},{{'Surveys','Life Tables'}},{'left','right';10,11},lABs,{'$\mathrm{Country}$','$\mathit{}$'},tABlE.country,[tABlE.files string(tABlE.tables)],[.145 .380 .0])
-    exportgraphics(gcf,char(pATh + "ReSuLTs/Table (" + Region(i) + ").png"),'Resolution',RESolUTioN);
+    exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/Table (" + Region(i) + ").png"),'Resolution',RESolUTioN);
 
     taBleTexT{i}      = table(tABlE.country,tABlE.files,tABlE.tables);
     p                 = [[4 10]/365.25;[2 4]/12;[5 7]/12;[8 10]/12;[11 24]/12];
-    s                 = find(ismember(xE{2},["0";"28d";"12m";"24m";"60m"]));
+    P                 = {find(ismember(xE{2},["0";"1d";"2d";"3d";"7d";"14d";"28d";"3m";"6m";"12m";"24m";"60m"])),find(ismember(xE{2},["0";"6m";"12m";"18m";"24m";"36m";"48m";"60m"]))};
+    sR                = find(ismember(xE{2},["0";"28d";"12m";"24m";"60m"]));
 
     if i <= 2
         sEL               = (iNFo.R == Region(i) & iNFo.exclusion == 0);
         for j = 1:numel(LT)
-            nMx        = cell2mat(LT{j}(sEL,1))';
-            nMx        = cell2mat(mat2cell(prctile(nMx(2:end,:),50)',ones(sum(sEL),1)*size(LT{j}{1,1},1))');
-            q          = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx))];
-            [qS,nMxS]  = smoothingLT(q,xE,s,100,10,0.25,p);
-            ndx        = qS(2:end,:) - qS(1:end - 1,:);
-            nLx        = min(ndx./nMxS,diff(xE{1},1).*(1 - qS(1:end - 1,:)));
-            nMxS       = (I'*ndx)./(I'*nLx);
-            %qS        = q(ismember(xE{2},x{2},:);
-            qS         = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1},1).*nMxS))];
-            B          = Coef_fast(qS,x,ReG);
-            beta{i}{j} = B(:,1:order);
+            nMx         = cell2mat(LT{j}(sEL,1))';
+            nMx         = cell2mat(mat2cell(prctile(nMx(2:end,:),50)',ones(sum(sEL),1)*size(LT{j}{1,1},1))');
+            q           = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx))];
+            [qS,nMxS]   = smoothingLT(q,xE,sR,100,10,0.25,p,P);
+            ndx         = qS(2:end,:) - qS(1:end - 1,:);
+            nLx         = min(ndx./nMxS,diff(xE{1},1).*(1 - qS(1:end - 1,:)));
+            nMxS        = (I'*ndx)./(I'*nLx);
+            %qS         = q(ismember(xE{2},x{2},:);
+            qS          = 1 - [ones(1,size(nMxS,2));exp(-cumsum(diff(x{1},1).*nMxS))];
+            B           = Coef_fast(qS,x,ReG);
+            betaS{i}{j} = B(:,1:order);
+
+            ndx         = q(2:end,:) - q(1:end - 1,:);
+            nLx         = min(ndx./nMx,diff(xE{1},1).*(1 - q(1:end - 1,:)));
+            nMx         = (I'*ndx)./(I'*nLx);
+            %q          = q(ismember(xE{2},x{2},:);
+            q           = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1},1).*nMx))];
+            B           = Coef_fast(qS,x,ReG);
+            betaR{i}{j} = B(:,1:order);
             clear q nMx qS nMxS ndx nLx B 
         end
         sEt{i} = char(Region(i));
@@ -219,8 +232,8 @@ end
 
 lABs                        = {num2cell(1:size(x{2},1) - 1)};
 nOTe                        = {'$\mathrm{ages/}\mathit{coeff.}$',char("$\mathrm{OLS-estimation,}$ Bootstrapping each smoothed survey " + string(R) + " times with replacement")};
-tABleX(sEt,[vARs vARs],foRMaT,lABs,nOTe,leGend,[beta{1}{3} beta{2}{3}],0.045,0.045,[])
-exportgraphics(gcf,char(pATh + "ReSuLTs/Table Coefficients.png"),'Resolution',RESolUTioN);
+tABleX(sEt,[vARs vARs],foRMaT,lABs,nOTe,leGend,[betaS{1}{3} betaS{2}{3}],0.045,0.045,[])
+exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/Table Coefficients.png"),'Resolution',RESolUTioN);
 
 sEL                         = (iNFo.R ~= '');
 ages                        = size(x{1},1) - 1;
@@ -230,7 +243,7 @@ G                           = ReG(1,1:3);
 for j = 1:numel(LT)
     nMx        = cell2mat(LT{j}(sEL,1))';
     nMx        = cell2mat(mat2cell(prctile(nMx(2:end,:),50)',ones(sum(sEL),1)*size(LT{j}{1,1},1))');
-    q          = 1 - [ones(1,size(m,2));exp(-cumsum(diff(xE{1},1).*nMx))];
+    q          = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx))];
     ndx        = q(2:end,:) - q(1:end - 1,:);
     nLx        = min(ndx./nMx,diff(xE{1},1).*(1 - q(1:end - 1,:)));
     nMx        = (I'*ndx)./(I'*nLx);
@@ -239,7 +252,7 @@ for j = 1:numel(LT)
     init       = Set(q,x,{F,ReG});
     init       = [log(init{2}),zeros(size(init{2}))];
     match      = Set(q,x,{F,G});
-    xo         = Match(match,{beta{1}{j},ReG},x,{F,G},init,250);
+    xo         = Match(match,{betaS{1}{j},ReG},x,{F,G},init,250);
     OuT{j}     = [exp(xo(:,1)),xo(:,2)];
     Qdhs{j}    = q;
 end

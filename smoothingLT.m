@@ -1,8 +1,14 @@
 function [qs,nMxS] = smoothingLT(q,x,s,R,r,lambda,p,P)
 
-n         = x{1}(2:end) - x{1}(1:end - 1);
+
 tables    = size(q,2);
 y         = -log(1 - q);
+
+if isequal(numel(lambda),0)
+    lambda = zeros(size(q,2),0);
+elseif isequal(numel(lambda),1)
+    lambda = ones(size(q,2),1)*lambda;
+end
 
 sET       = sum(y == 0);
 mIn       = union(sET,sET(1));
@@ -19,7 +25,7 @@ for i = 1:numel(mIn)
     xo                = X(~sEL);
     yi                = Monotonic(x{1}(rOWs),y(rOWs,cOLs),xo);
     K                 = xo > 0 & yi(:,1) > 0;
-    [sM,lambda(cOLs)] = BSplineEM(log(xo(K)),r,3,3,lambda,log(yi(K,:)));
+    [sM,lAMbda(cOLs)] = BSplineEM(log(xo(K)),r,3,3,lambda(cOLs),log(yi(K,:)));
     fIX               = find(any(sM(2:end,:) < sM(1:end - 1,:),1))
     sM(:,fIX)         = log(cumsum([exp(sM(1,fIX));max(exp(sM(2:end,fIX)) - exp(sM(1:end - 1,fIX)),0)],1));
 
@@ -31,8 +37,8 @@ end
 
 
 qs        = 1 - exp(-ys);
-nMx       = (y(2:end,:) - y(1:end - 1,:))./n;
-nMxS      = (ys(2:end,:) - ys(1:end - 1,:))./n;
+nMx       = (y(2:end,:) - y(1:end - 1,:))./diff(x{1},1);
+nMxS      = (ys(2:end,:) - ys(1:end - 1,:))./diff(x{1},1);
 
 if isequal(tables,1)
     mPIX                     = 538756;
@@ -99,8 +105,8 @@ if isequal(tables,1)
                 xlim([-0.1 5])
                 sET                              = P{2};
             end
-            plot(x{1}(1:end - 1) + n/2,nMx,'-o','MarkerSize',3.0,'color',coloR{2},'LineWidth',0.5,'MarkerFaceColor',coloR{2});
-            plot(x{1}(1:end - 1) + n/2,nMxS,'LineWidth',1.15,'color',coloR{3});
+            plot(x{1}(1:end - 1) + diff(x{1},1)/2,nMx,'-o','MarkerSize',3.0,'color',coloR{2},'LineWidth',0.5,'MarkerFaceColor',coloR{2});
+            plot(x{1}(1:end - 1) + diff(x{1},1)/2,nMxS,'LineWidth',1.15,'color',coloR{3});
         elseif isequal(ceil(i/2),3)
             mIn                              = 0;
             mAx                              = max([q;qs])*1.05;
