@@ -211,7 +211,7 @@ for i = 1:numel(Region)
             ndx         = qS(2:end,:) - qS(1:end - 1,:);
             nLx         = min(ndx./nMxS,diff(xE{1},1).*(1 - qS(1:end - 1,:)));
             nMxS        = (I'*ndx)./(I'*nLx);
-            %qS         = q(ismember(xE{2},x{2},:);
+            %qS         = qS(ismember(xE{2},x{2},:);
             qS          = 1 - [ones(1,size(nMxS,2));exp(-cumsum(diff(x{1},1).*nMxS))];
             B           = Coef_fast(qS,x,ReG);
             betaS{i}{j} = B(:,1:order);
@@ -221,7 +221,7 @@ for i = 1:numel(Region)
             nMx         = (I'*ndx)./(I'*nLx);
             %q          = q(ismember(xE{2},x{2},:);
             q           = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1},1).*nMx))];
-            B           = Coef_fast(qS,x,ReG);
+            B           = Coef_fast(q,x,ReG);
             betaR{i}{j} = B(:,1:order);
             clear q nMx qS nMxS ndx nLx B 
         end
@@ -241,18 +241,30 @@ F                           = table(cellstr(char(kron(ones(ages,1),'q'))),cellst
 G                           = ReG(1,1:3);
 
 for j = 1:numel(LT)
-    nMx        = cell2mat(LT{j}(sEL,1))';
-    nMx        = cell2mat(mat2cell(prctile(nMx(2:end,:),50)',ones(sum(sEL),1)*size(LT{j}{1,1},1))');
-    q          = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx))];
-    ndx        = q(2:end,:) - q(1:end - 1,:);
-    nLx        = min(ndx./nMx,diff(xE{1},1).*(1 - q(1:end - 1,:)));
-    nMx        = (I'*ndx)./(I'*nLx);
-    q          = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1}).*nMx,1))];
+    nMx         = cell2mat(LT{j}(sEL,1))';
+    nMx         = cell2mat(mat2cell(prctile(nMx(2:end,:),50)',ones(sum(sEL),1)*size(LT{j}{1,1},1))');
+    q           = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx))];
+    sET         = q(end,:) > 0;
+
+    [qS,nMxS]   = smoothingLT(q(:,sET),xE,sR,100,10,0.25,p,P);
+    ndx         = qS(2:end,:) - qS(1:end - 1,:);
+    nLx         = min(ndx./nMxS,diff(xE{1},1).*(1 - qS(1:end - 1,:)));
+    nMxS        = (I'*ndx)./(I'*nLx);
+    qS          = NaN(numel(x{1}),numel(sET));
+    %qS(:,sET)  = qS(ismember(xE{2},x{2},:);
+    qS(:,sET)   = 1 - [ones(1,size(nMxS,2));exp(-cumsum(diff(x{1},1).*nMxS))];
+    Qdhs_S{j}   = qS';
+
+    ndx         = q(2:end,:) - q(1:end - 1,:);
+    nLx         = min(ndx./nMx,diff(xE{1},1).*(1 - q(1:end - 1,:)));
+    nMx         = (I'*ndx)./(I'*nLx);
+    q           = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1}).*nMx,1))];
     %q          = q(ismember(xE{2},x{2},:);
+    Qdhs_R{j}   = q';
+
     init       = Set(q,x,{F,ReG});
     init       = [log(init{2}),zeros(size(init{2}))];
     match      = Set(q,x,{F,G});
     xo         = Match(match,{betaS{1}{j},ReG},x,{F,G},init,250);
     OuT{j}     = [exp(xo(:,1)),xo(:,2)];
-    Qdhs{j}    = q;
 end

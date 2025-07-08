@@ -49,7 +49,7 @@ B{1}                    = Coef_fast(qS(:,sEL),x,ReG);
 Beta{2}                 = B;
 
 iN                      = iNFo(sEL,:); 
-J                       = [10 23 50 240];
+J                       = [10 15 23 50 240];
 for j = 1:numel(J)
     smoothingLT(q(:,J(j)),xE,sR,100,10,0.25,p,P);
     exportgraphics(gcf,char(pATh + "ReSuLTs/T&F/smoothing example " + iN.country(J(j)) + " " + iN.fILe(J(j)) + ".png"),'Resolution',RESolUTioN);
@@ -426,8 +426,9 @@ end
 
 
 foRMaT            = {'%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%0.4f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%+0.3f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f','%0.0f'};
-vARs              = {'$\mathrm{All\,}\mathit{q}\mathrm{(}\mathit{x}\mathrm{)}$','$\mathit{q}\mathrm{(7}\mathit{d}\mathrm{)}$','$\mathit{q}\mathrm{(28}\mathit{d}\mathrm{)}$','$\mathit{q}\mathrm{(3}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(6}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(12}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(48}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(5}\mathit{y}\mathrm{)}$'};
+vARs              = {'$\mathrm{All\,}\mathit{q}\mathrm{(}\mathit{x}\mathrm{)}$','$\mathit{q}\mathrm{(7}\mathit{d}\mathrm{)}$','$\mathit{q}\mathrm{(28}\mathit{d}\mathrm{)}$','$\mathit{q}\mathrm{(3}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(6}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(12}\mathit{m}\mathrm{)}$','$\mathit{q}\mathrm{(2}\mathit{y}\mathrm{)}$','$\mathit{q}\mathrm{(5}\mathit{y}\mathrm{)}$'};
 vARs              = {vARs vARs vARs};
+aS                = find(ismember(x{2}(2:end),["7d";"28d";"3m";"6m";"12m";"24m";"60m"]));
 
 lambda            = [0.025 0.05 0.10 0.25 0.50 0.75];
 knots             = [5 10 15 20];
@@ -496,9 +497,9 @@ for i = 1:numel(group{1})
                 sample.MSE(r - warmup,~SE) = Bi.^2 + 1./Phi;
             end
         end
-        tABleII{i}.RMSE(j,:)      = [prctile(sqrt(sample.MSE*W),[50 2.5 97.5]) mat2cell(prctile(sqrt(sample.MSE(:,[1 4 6 9 15 21 22])),[50 2.5 97.5])',ones(7,1),3)'];
-        tABleII{i}.Bias(j,:)      = [prctile(sample.Bi*W,[50 2.5 97.5]) mat2cell(prctile(sample.Bi(:,[1 4 6 9 15 21 22]),[50 2.5 97.5])',ones(7,1),3)'];
-        tABleII{i}.Precision(j,:) = [prctile(1./(1./sample.Phi*W),[50 2.5 97.5]) mat2cell(prctile(sample.Phi(:,[1 4 6 9 15 21 22]),[50 2.5 97.5])',ones(7,1),3)'];
+        tABleII{i}.RMSE(j,:)      = [prctile(sqrt(sample.MSE*W),[50 2.5 97.5]) mat2cell(prctile(sqrt(sample.MSE(:,aS)),[50 2.5 97.5])',ones(7,1),3)'];
+        tABleII{i}.Bias(j,:)      = [prctile(sample.Bi*W,[50 2.5 97.5]) mat2cell(prctile(sample.Bi(:,aS),[50 2.5 97.5])',ones(7,1),3)'];
+        tABleII{i}.Precision(j,:) = [prctile(1./(1./sample.Phi*W),[50 2.5 97.5]) mat2cell(prctile(sample.Phi(:,aS),[50 2.5 97.5])',ones(7,1),3)'];
         clear sample 
     end
 
