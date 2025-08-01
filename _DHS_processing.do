@@ -87,7 +87,7 @@ foreach svy of local DHS {
 		replace    B_min          = mdy(b3 + 1 - floor((b3 - 1)/12)*12,1,floor((b3 - 1)/12) + 1900) - 1  if B_min == . & b3  != . /*Calculates again, if incorrect day of the month.*/ 
 		generate   B_max          = B_min                                                                                         /*Because exact dates are available.*/
 		}
-	replace    B_max          = max(min(B_max,interview),B_min)	                                                                  /*Adjusts B_max postdating the day of interview.*/
+	replace    B_max          = max(min(B_max,interview),B_min)	                     if B_min != .                                /*Adjusts B_max postdating the day of interview.*/
 		
 	format     %tdDD/NN/CCYY interview B_* DOB		                     /*Gives date format to the date variables.*/
 	rename     b4 sex                                                    /*Identifies the sex and age of the child.*/
