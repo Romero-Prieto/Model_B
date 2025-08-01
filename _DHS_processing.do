@@ -173,7 +173,7 @@ foreach svy of local DHS {
 		}
 	}
 
-merge m:1  country using "`pATh'/alpha2.dta", nogenerate noreport keep(master match)
+merge m:1  country using "`pATh'/_codesDHS.dta", nogenerate noreport keep(master match)
 sort       fILe
 generate   j            = _n
 order      j
