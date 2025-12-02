@@ -1,4 +1,4 @@
-This is a code repository for the manuscript “Modeling age patterns of under-5 mortality: a comprehensive model life table approach for low- and middle-income countries”, which is currently under review.
+This is a code repository for the manuscript “Modeling age patterns of under-5 mortality: a comprehensive model life table approach for low- and middle-income countries”, which is currently under review. https://repository.upenn.edu/entities/publication/de16f47e-ad01-4343-a6b1-2184caf933e1
 
 The MATLAB file Model_B.m produces the figures and tables included in the manuscript, using one input data file: BoOTStrAp_DHS.mat. This data file is not part of this repository but can be generated after running the Stata do-file _DHS_processing.do and the MATLAB file Model_B_BoOTStrApPInGDHS.m in that order (both files within this repository). 
 
