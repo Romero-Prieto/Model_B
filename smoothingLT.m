@@ -11,14 +11,14 @@ elseif isequal(numel(lambda),1)
 end
 
 sET       = sum(y == 0);
-mIn       = union(sET,sET(1));
+mIn       = union(sET,[]);
 for i = 1:numel(mIn)
-    rOWs          = mIn(i):numel(x{i});
-    cOLs          = sET == mIn(i);
-    S             = (1:(numel(rOWs) - 1)/(R - 1):numel(rOWs))';
-    X             = interMonotonic(s,x{1}(union(max(s,mIn(i)),mIn(i))),S,[]);
+    rOWs              = mIn(i):numel(x{1});
+    cOLs              = sET == mIn(i);
+    S                 = (rOWs(1):(numel(rOWs) - 1)/(R - 1):rOWs(end))';
+    X                 = interMonotonic(union(max(s,mIn(i)),mIn(i)),x{1}(union(max(s,mIn(i)),mIn(i))),S,[]);
     
-    sEL           = isnan(X);
+    sEL               = isnan(X);
     for j = 1:size(p,1)
         sEL = sEL | (X > p(j,1) & X <= p(j,2));
     end
@@ -27,7 +27,7 @@ for i = 1:numel(mIn)
     K                 = xo > 0 & yi(:,1) > 0;
     [sM,lAMbda(cOLs)] = BSplineEM(log(xo(K)),r,3,3,lambda(cOLs),log(yi(K,:)));
     fIX               = find(any(sM(2:end,:) < sM(1:end - 1,:),1))
-    sM(:,fIX)         = log(cumsum([exp(sM(1,fIX));max(exp(sM(2:end,fIX)) - exp(sM(1:end - 1,fIX)),0)],1));
+    sM(:,fIX)         = log(cumsum([exp(sM(1,fIX));max(diff(exp(sM(:,fIX)),1),0)],1));
 
     ySm               = yi;
     ySm(K,:)          = exp(sM);
@@ -37,8 +37,8 @@ end
 
 
 qs        = 1 - exp(-ys);
-nMx       = (y(2:end,:) - y(1:end - 1,:))./diff(x{1},1);
-nMxS      = (ys(2:end,:) - ys(1:end - 1,:))./diff(x{1},1);
+nMx       = diff(y,1)./diff(x{1},1);
+nMxS      = diff(ys,1)./diff(x{1},1);
 
 if isequal(tables,1)
     mPIX                     = 538756;
@@ -79,12 +79,12 @@ if isequal(tables,1)
             ax{i}.YAxis.MinorTickValues      = .1./(2.^(7:-1:-6));
 
             if isequal(i,1)
-                xlim([x{1}(2)*0.5 5.0])
+                xlim([x{1}(2)*0.5 x{1}(end)])
                 ax{i}.XScale                     = 'log';
                 sET                              = P{1};
                 ylabel('$\int_{0}^{x} m(y) \,dy\textit{   (log scale)}$','Interpreter','latex','FontSize',11*z);
             else
-                xlim([-0.1 5])
+                xlim([-0.1 x{1}(end)])
                 sET                              = P{2};                
             end
             plot(x{1},y,'-o','MarkerSize',3.0,'color',coloR{2},'LineWidth',0.5,'MarkerFaceColor',coloR{2});
@@ -97,12 +97,12 @@ if isequal(tables,1)
             ax{i}.YAxis.MinorTickValues      = .1./(2.^(7:-1:-6));
 
             if isequal(i,3)
-                xlim([x{1}(2)*0.5 5.0])
+                xlim([x{1}(2)*0.5 x{1}(end)])
                 ax{i}.XScale                     = 'log';
                 sET                              = P{1};
                 ylabel('$\mathit{_nM_x} \textit{   (log scale)}$','Interpreter','latex','FontSize',11*z);
             else
-                xlim([-0.1 5])
+                xlim([-0.1 x{1}(end)])
                 sET                              = P{2};
             end
             plot(x{1}(1:end - 1) + diff(x{1},1)/2,nMx,'-o','MarkerSize',3.0,'color',coloR{2},'LineWidth',0.5,'MarkerFaceColor',coloR{2});
@@ -113,13 +113,13 @@ if isequal(tables,1)
             ax{i}.YScale                     = 'linear';
 
             if isequal(i,5)
-                xlim([x{1}(2)*0.5 5.0])
+                xlim([x{1}(2)*0.5 x{1}(end)])
                 ax{i}.XScale                     = 'log';
                 sET                              = P{1};
                 ylabel('$\mathit{q}\mathrm{(}\mathit{x}\mathrm{)}\textit{   (linear scale)}$','Interpreter','latex','FontSize',11*z);
                 xlabel('$\textit{age   (log scale)}$','Interpreter','latex','FontSize',11*z);
             else
-                xlim([-0.1 5])
+                xlim([-0.1 x{1}(end)])
                 sET                              = P{2};
                 xlabel('$\textit{age}$','Interpreter','latex','FontSize',11*z);
             end
