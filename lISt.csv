@@ -7,446 +7,454 @@ j,fILe,survey,country,N,sTArt,eNd,ReTRo,state,DHS,Region,SubRegion
 6,AM61,AM6,Armenia,8424,2010,2010,5,,AM,North Africa - West Asia - Europe,West Asia
 7,AM72,AM7,Armenia,8771,2015,2016,5,,AM,North Africa - West Asia - Europe,West Asia
 8,AO71,AO7,Angola,42002,2015,2016,5,,AO,Sub-Saharan Africa,Middle Africa
-9,AZ52,AZ5,Azerbaijan,13565,2006,2006,5,,AZ,North Africa - West Asia - Europe,West Asia
-10,BD31,BD3,Bangladesh,32590,1993,1994,5,,BD,South and Southeast Asia,South Asia
-11,BD3A,BD3,Bangladesh,29366,1996,1997,5,,BD,South and Southeast Asia,South Asia
-12,BD41,BD3,Bangladesh,31925,1999,2000,5,,BD,South and Southeast Asia,South Asia
-13,BD4J,BD4,Bangladesh,33605,2004,2004,5,,BD,South and Southeast Asia,South Asia
-14,BD51,BD5,Bangladesh,30527,2007,2007,5,,BD,South and Southeast Asia,South Asia
-15,BD61,BD6,Bangladesh,45844,2011,2011,5,,BD,South and Southeast Asia,South Asia
-16,BD72,BD6,Bangladesh,43772,2014,2014,5,,BD,South and Southeast Asia,South Asia
-17,BD7R,BD7,Bangladesh,47828,2017,2018,5,,BD,South and Southeast Asia,South Asia
-18,BD81,BD8,Bangladesh,64722,2022,2022,5,,BD,South and Southeast Asia,South Asia
-19,BF21,BF2,Burkina Faso,20655,1992,1993,5,,BF,Sub-Saharan Africa,Western Africa
-20,BF31,BF3,Burkina Faso,22145,1998,1999,5,,BF,Sub-Saharan Africa,Western Africa
-21,BF43,BF4,Burkina Faso,41520,2003,2003,5,,BF,Sub-Saharan Africa,Western Africa
-22,BF62,BF6,Burkina Faso,56178,2010,2010,5,,BF,Sub-Saharan Africa,Western Africa
-23,BF81,BF8,Burkina Faso,48745,2021,2021,5,,BF,Sub-Saharan Africa,Western Africa
-24,BJ31,BJ3,Benin,19359,1996,1996,5,,BJ,Sub-Saharan Africa,Western Africa
-25,BJ41,BJ4,Benin,19398,2001,2001,5,,BJ,Sub-Saharan Africa,Western Africa
-26,BJ51,BJ5,Benin,57232,2006,2006,5,,BJ,Sub-Saharan Africa,Western Africa
-27,BJ61,BJ6,Benin,47152,2011,2012,5,,BJ,Sub-Saharan Africa,Western Africa
-28,BJ71,BJ7,Benin,45853,2017,2018,5,,BJ,Sub-Saharan Africa,Western Africa
-29,BO01,BO,Bolivia,22338,1989,1989,5,,BO,Latin America and Caribbean,South America
-30,BO31,BO3,Bolivia,24174,1993,1994,5,,BO,Latin America and Caribbean,South America
-31,BO3B,BO3,Bolivia,29473,1998,1998,5,,BO,Latin America and Caribbean,South America
-32,BO41,BO4,Bolivia,45116,2003,2004,5,,BO,Latin America and Caribbean,South America
-33,BO51,BO5,Bolivia,40355,2008,2008,5,,BO,Latin America and Caribbean,South America
-34,BR01,BR,Brazil,12356,1986,1986,5,,BR,Latin America and Caribbean,South America
-35,BR21,BR2,Brazil,15363,1991,1992,5,,BR,Latin America and Caribbean,South America
-36,BR31,BR3,Brazil,25513,1996,1996,5,,BR,Latin America and Caribbean,South America
-37,BU01,BU,Burundi,11886,1987,1987,5,,BU,Sub-Saharan Africa,Eastern Africa
-38,BU61,BU6,Burundi,24520,2010,2011,5,,BU,Sub-Saharan Africa,Eastern Africa
-39,BU71,BU7,Burundi,45419,2016,2017,5,,BU,Sub-Saharan Africa,Eastern Africa
-40,CD51,CD5,Congo Democratic Republic,29548,2007,2007,5,,CD,Sub-Saharan Africa,Middle Africa
-41,CD61,CD6,Congo Democratic Republic,59276,2013,2014,5,,CD,Sub-Saharan Africa,Middle Africa
-42,CF31,CF3,Central African Republic,16936,1994,1995,5,,CF,Sub-Saharan Africa,Middle Africa
-43,CG51,CG5,Congo,16687,2005,2005,5,,CG,Sub-Saharan Africa,Middle Africa
-44,CG61,CG6,Congo,31948,2011,2012,5,,CG,Sub-Saharan Africa,Middle Africa
-45,CI35,CI3,Cote d'Ivoire,24870,1994,1994,5,,CI,Sub-Saharan Africa,Western Africa
-46,CI3A,CI3,Cote d'Ivoire,7575,1998,1999,5,,CI,Sub-Saharan Africa,Western Africa
-47,CI62,CI6,Cote d'Ivoire,28211,2011,2012,5,,CI,Sub-Saharan Africa,Western Africa
-48,CI81,CI8,Cote d'Ivoire,39979,2021,2021,5,,CI,Sub-Saharan Africa,Western Africa
-49,CM22,CM2,Cameroon,11612,1991,1991,5,,CM,Sub-Saharan Africa,Middle Africa
-50,CM31,CM3,Cameroon,15187,1998,1998,5,,CM,Sub-Saharan Africa,Middle Africa
-51,CM44,CM4,Cameroon,29455,2004,2004,5,,CM,Sub-Saharan Africa,Middle Africa
-52,CM61,CM6,Cameroon,42312,2011,2011,5,,CM,Sub-Saharan Africa,Middle Africa
-53,CM71,CM7,Cameroon,33988,2018,2019,5,,CM,Sub-Saharan Africa,Middle Africa
-54,CO01,CO,Colombia,11622,1986,1986,5,,CO,Latin America and Caribbean,South America
-55,CO22,CO2,Colombia,15976,1990,1990,5,,CO,Latin America and Caribbean,South America
-56,CO31,CO3,Colombia,21830,1995,1995,5,,CO,Latin America and Caribbean,South America
-57,CO41,CO4,Colombia,21267,2000,2000,5,,CO,Latin America and Caribbean,South America
-58,CO53,CO4,Colombia,71278,2004,2005,5,,CO,Latin America and Caribbean,South America
-59,CO61,CO5,Colombia,91399,2009,2010,5,,CO,Latin America and Caribbean,South America
-60,CO72,CO7,Colombia,62593,2015,2016,5,,CO,Latin America and Caribbean,South America
-61,DR01,DR,Dominican Republic,20151,1986,1986,5,,DR,Latin America and Caribbean,Caribbean
-62,DR21,DR2,Dominican Republic,17163,1991,1991,5,,DR,Latin America and Caribbean,Caribbean
-63,DR32,DR3,Dominican Republic,19784,1996,1996,5,,DR,Latin America and Caribbean,Caribbean
-64,DR41,DR3,Dominican Republic,2871,1999,1999,5,,DR,Latin America and Caribbean,Caribbean
-65,DR4B,DR4,Dominican Republic,53667,2002,2002,5,,DR,Latin America and Caribbean,Caribbean
-66,DR52,DR5,Dominican Republic,58037,2007,2007,5,,DR,Latin America and Caribbean,Caribbean
-67,DR5A,DR5,Dominican Republic,4385,2007,2007,5,,DR,Latin America and Caribbean,Caribbean
-68,DR61,DR6,Dominican Republic,18167,2013,2013,5,,DR,Latin America and Caribbean,Caribbean
-69,DR6A,DR6,Dominican Republic,4313,2013,2013,5,,DR,Latin America and Caribbean,Caribbean
-70,EC01,EC,Ecuador,11835,1987,1987,5,,EC,Latin America and Caribbean,South America
-71,EG01,EG,Egypt,35519,1988,1989,5,,EG,North Africa - West Asia - Europe,North Africa
-72,EG21,EG2,Egypt,38076,1992,1993,5,,EG,North Africa - West Asia - Europe,North Africa
-73,EG33,EG3,Egypt,56381,1995,1996,5,,EG,North Africa - West Asia - Europe,North Africa
-74,EG42,EG4,Egypt,54780,2000,2000,5,,EG,North Africa - West Asia - Europe,North Africa
-75,EG4A,EG4,Egypt,30298,2003,2003,5,,EG,North Africa - West Asia - Europe,North Africa
-76,EG51,EG4,Egypt,61455,2005,2005,5,,EG,North Africa - West Asia - Europe,North Africa
-77,EG5A,EG5,Egypt,48619,2008,2008,5,,EG,North Africa - West Asia - Europe,North Africa
-78,EG61,EG6,Egypt,59266,2014,2014,5,,EG,North Africa - West Asia - Europe,North Africa
-79,ES01,ES,El Salvador,6383,1985,1985,5,,ES,Latin America and Caribbean,Central America
-80,ET41,ET4,Ethiopia,44174,1992,1992,5,,ET,Sub-Saharan Africa,Eastern Africa
-81,ET51,ET4,Ethiopia,39881,1997,1997,5,,ET,Sub-Saharan Africa,Eastern Africa
-82,ET61,ET6,Ethiopia,45540,2003,2003,5,,ET,Sub-Saharan Africa,Eastern Africa
-83,ET71,ET7,Ethiopia,41392,2008,2008,5,,ET,Sub-Saharan Africa,Eastern Africa
-84,ET81,ET7,Ethiopia,23007,2011,2011,5,,ET,Sub-Saharan Africa,Eastern Africa
-85,GA41,GA3,Gabon,16878,2000,2001,5,,GA,Sub-Saharan Africa,Middle Africa
-86,GA61,GA6,Gabon,23109,2012,2012,5,,GA,Sub-Saharan Africa,Middle Africa
-87,GA71,GA7,Gabon,23232,2019,2021,5,,GA,Sub-Saharan Africa,Middle Africa
-88,GH02,GH,Ghana,14216,1988,1988,5,,GH,Sub-Saharan Africa,Western Africa
-89,GH31,GH2,Ghana,13298,1993,1994,5,,GH,Sub-Saharan Africa,Western Africa
-90,GH41,GH3,Ghana,13188,1998,1999,5,,GH,Sub-Saharan Africa,Western Africa
-91,GH4B,GH4,Ghana,15086,2003,2003,5,,GH,Sub-Saharan Africa,Western Africa
-92,GH5A,GH5,Ghana,11888,2008,2008,5,,GH,Sub-Saharan Africa,Western Africa
-93,GH72,GH6,Ghana,23118,2014,2014,5,,GH,Sub-Saharan Africa,Western Africa
-94,GH8C,GH8,Ghana,34663,2022,2023,5,,GH,Sub-Saharan Africa,Western Africa
-95,GM61,GM6,Gambia,26601,2013,2013,5,,GM,Sub-Saharan Africa,Western Africa
-96,GM81,GM7,Gambia,31665,2019,2020,5,,GM,Sub-Saharan Africa,Western Africa
-97,GN41,GN3,Guinea,22943,1999,1999,5,,GN,Sub-Saharan Africa,Western Africa
-98,GN52,GN4,Guinea,27115,2005,2005,5,,GN,Sub-Saharan Africa,Western Africa
-99,GN62,GN6,Guinea,27683,2012,2012,5,,GN,Sub-Saharan Africa,Western Africa
-100,GN71,GN7,Guinea,28887,2018,2018,5,,GN,Sub-Saharan Africa,Western Africa
-101,GU01,GU,Guatemala,14698,1987,1987,5,,GU,Latin America and Caribbean,Central America
-102,GU34,GU3,Guatemala,38753,1995,1995,5,,GU,Latin America and Caribbean,Central America
-103,GU41,GU3,Guatemala,18581,1998,1999,5,,GU,Latin America and Caribbean,Central America
-104,GU71,GU6,Guatemala,55398,2014,2015,5,,GU,Latin America and Caribbean,Central America
-105,GY5I,GY5,Guyana,10929,2009,2009,5,,GY,Latin America and Caribbean,South America
-106,HN52,HN5,Honduras,50093,2005,2006,5,,HN,Latin America and Caribbean,Central America
-107,HN62,HN6,Honduras,49263,2011,2012,5,,HN,Latin America and Caribbean,Central America
-108,HT31,HT3,Haiti,12547,1994,1995,5,,HT,Latin America and Caribbean,Caribbean
-109,HT42,HT4,Haiti,26437,2000,2000,5,,HT,Latin America and Caribbean,Caribbean
-110,HT52,HT5,Haiti,24830,2005,2006,5,,HT,Latin America and Caribbean,Caribbean
-111,HT61,HT6,Haiti,29013,2012,2012,5,,HT,Latin America and Caribbean,Caribbean
-112,HT71,HT7,Haiti,27809,2016,2017,5,,HT,Latin America and Caribbean,Caribbean
-113,IA23-R02,IA2,India,12133,1992,1992,10,SSandhra pradeshSS,IA,South and Southeast Asia,South Asia
-114,IA23-R03,IA2,India,10698,1992,1993,10,SSassamSS,IA,South and Southeast Asia,South Asia
-115,IA23-R04,IA2,India,19936,1993,1993,10,SSbiharSS,IA,South and Southeast Asia,South Asia
-116,IA23-R05,IA2,India,8970,1992,1993,10,SSgoaSS,IA,South and Southeast Asia,South Asia
-117,IA23-R06,IA2,India,11682,1993,1993,10,SSgujaratSS,IA,South and Southeast Asia,South Asia
-118,IA23-R07,IA2,India,9155,1993,1993,10,SSharyanaSS,IA,South and Southeast Asia,South Asia
-119,IA23-R08,IA2,India,8815,1992,1992,10,SShimachal pradeshSS,IA,South and Southeast Asia,South Asia
-120,IA23-R09,IA2,India,8702,1993,1993,10,SSjammuSS,IA,South and Southeast Asia,South Asia
-121,IA23-R10,IA2,India,13974,1992,1993,10,SSkarnatakaSS,IA,South and Southeast Asia,South Asia
-122,IA23-R11,IA2,India,11220,1992,1993,10,SSkeralaSS,IA,South and Southeast Asia,South Asia
-123,IA23-R12,IA2,India,20825,1992,1992,10,SSmadhya pradeshSS,IA,South and Southeast Asia,South Asia
-124,IA23-R13,IA2,India,12374,1992,1993,10,SSmaharashtraSS,IA,South and Southeast Asia,South Asia
-125,IA23-R14,IA2,India,3291,1993,1993,10,SSmanipurSS,IA,South and Southeast Asia,South Asia
-126,IA23-R15,IA2,India,3695,1993,1993,10,SSmeghalayaSS,IA,South and Southeast Asia,South Asia
-127,IA23-R16,IA2,India,3204,1993,1993,10,SSmizoramSS,IA,South and Southeast Asia,South Asia
-128,IA23-R17,IA2,India,3672,1993,1993,10,SSnagalandSS,IA,South and Southeast Asia,South Asia
-129,IA23-R18,IA2,India,13409,1993,1993,10,SSorissaSS,IA,South and Southeast Asia,South Asia
-130,IA23-R19,IA2,India,9132,1993,1993,10,SSpunjabSS,IA,South and Southeast Asia,South Asia
-131,IA23-R20,IA2,India,17085,1992,1993,10,SSrajasthanSS,IA,South and Southeast Asia,South Asia
-132,IA23-R22,IA2,India,11139,1992,1992,10,SStamil naduSS,IA,South and Southeast Asia,South Asia
-133,IA23-R23,IA2,India,13579,1992,1992,10,SSwest bengalSS,IA,South and Southeast Asia,South Asia
-134,IA23-R24,IA2,India,42209,1992,1993,10,SSuttar pradeshSS,IA,South and Southeast Asia,South Asia
-135,IA23-R30,IA2,India,10208,1993,1993,10,SSnew delhiSS,IA,South and Southeast Asia,South Asia
-136,IA23-R34,IA2,India,2818,1993,1993,10,SSarunachalpradeshSS,IA,South and Southeast Asia,South Asia
-137,IA23-R35,IA2,India,3674,1993,1993,10,SStripuraSS,IA,South and Southeast Asia,South Asia
-138,IA42-R02,IA3,India,11399,1998,1999,10,SSandhra pradeshSS,IA,South and Southeast Asia,South Asia
-139,IA42-R03,IA3,India,10268,1999,1999,10,SSassamSS,IA,South and Southeast Asia,South Asia
-140,IA42-R04,IA3,India,23955,1998,1999,10,SSbiharSS,IA,South and Southeast Asia,South Asia
-141,IA42-R05,IA3,India,3030,1999,1999,10,SSgoaSS,IA,South and Southeast Asia,South Asia
-142,IA42-R06,IA3,India,11395,1998,1999,10,SSgujaratSS,IA,South and Southeast Asia,South Asia
-143,IA42-R07,IA3,India,9002,1998,1999,10,SSharyanaSS,IA,South and Southeast Asia,South Asia
-144,IA42-R08,IA3,India,8242,1999,1999,10,SShimachal pradeshSS,IA,South and Southeast Asia,South Asia
-145,IA42-R09,IA3,India,9390,1999,1999,10,SSjammuSS,IA,South and Southeast Asia,South Asia
-146,IA42-R10,IA3,India,12664,1999,1999,10,SSkarnatakaSS,IA,South and Southeast Asia,South Asia
-147,IA42-R11,IA3,India,6753,1999,1999,10,SSkeralaSS,IA,South and Southeast Asia,South Asia
-148,IA42-R12,IA3,India,24077,1998,1999,10,SSmadhya pradeshSS,IA,South and Southeast Asia,South Asia
-149,IA42-R13,IA3,India,14828,1999,1999,10,SSmaharashtraSS,IA,South and Southeast Asia,South Asia
-150,IA42-R14,IA3,India,4864,1999,1999,10,SSmanipurSS,IA,South and Southeast Asia,South Asia
-151,IA42-R15,IA3,India,3524,1999,1999,10,SSmeghalayaSS,IA,South and Southeast Asia,South Asia
-152,IA42-R16,IA3,India,3268,1999,1999,10,SSmizoramSS,IA,South and Southeast Asia,South Asia
-153,IA42-R17,IA3,India,3036,1999,1999,10,SSnagalandSS,IA,South and Southeast Asia,South Asia
-154,IA42-R18,IA3,India,13009,1999,1999,10,SSorissaSS,IA,South and Southeast Asia,South Asia
-155,IA42-R19,IA3,India,7888,1998,1999,10,SSpunjabSS,IA,South and Southeast Asia,South Asia
-156,IA42-R20,IA3,India,23458,1998,1999,10,SSrajasthanSS,IA,South and Southeast Asia,South Asia
-157,IA42-R21,IA3,India,3384,1998,1999,10,SSsikkimSS,IA,South and Southeast Asia,South Asia
-158,IA42-R22,IA3,India,11585,1999,1999,10,SStamil naduSS,IA,South and Southeast Asia,South Asia
-159,IA42-R23,IA3,India,11859,1998,1999,10,SSwest bengalSS,IA,South and Southeast Asia,South Asia
-160,IA42-R24,IA3,India,34051,1998,1999,10,SSuttar pradeshSS,IA,South and Southeast Asia,South Asia
-161,IA42-R30,IA3,India,7037,1999,1999,10,SSnew delhiSS,IA,South and Southeast Asia,South Asia
-162,IA42-R34,IA3,India,3321,1999,1999,10,SSarunachalpradeshSS,IA,South and Southeast Asia,South Asia
-163,IA42-R35,IA3,India,3023,2000,2000,10,SStripuraSS,IA,South and Southeast Asia,South Asia
-164,IA52-R01,IA5,India,7674,2006,2006,10,SS[jm] jammu and kashmirSS,IA,South and Southeast Asia,South Asia
-165,IA52-R02,IA5,India,6619,2006,2006,10,SS[hp] himachal pradeshSS,IA,South and Southeast Asia,South Asia
-166,IA52-R03,IA5,India,8150,2005,2006,10,SS[pj] punjabSS,IA,South and Southeast Asia,South Asia
-167,IA52-R05,IA5,India,7259,2006,2006,10,SS[uc] uttaranchalSS,IA,South and Southeast Asia,South Asia
-168,IA52-R06,IA5,India,6982,2006,2006,10,SS[hr] haryanaSS,IA,South and Southeast Asia,South Asia
-169,IA52-R07,IA5,India,7580,2005,2006,10,SS[dl] delhiSS,IA,South and Southeast Asia,South Asia
-170,IA52-R08,IA5,India,11249,2005,2006,10,SS[rj] rajasthanSS,IA,South and Southeast Asia,South Asia
-171,IA52-R09,IA5,India,36500,2005,2006,10,SS[up] uttar pradeshSS,IA,South and Southeast Asia,South Asia
-172,IA52-R10,IA5,India,11523,2006,2006,10,SS[bh] biharSS,IA,South and Southeast Asia,South Asia
-173,IA52-R11,IA5,India,4192,2006,2006,10,SS[sk] sikkimSS,IA,South and Southeast Asia,South Asia
-174,IA52-R12,IA5,India,4391,2006,2006,10,SS[ar] arunachal pradeshSS,IA,South and Southeast Asia,South Asia
-175,IA52-R13,IA5,India,9766,2006,2006,10,SS[na] nagalandSS,IA,South and Southeast Asia,South Asia
-176,IA52-R14,IA5,India,10015,2006,2006,10,SS[mn] manipurSS,IA,South and Southeast Asia,South Asia
-177,IA52-R15,IA5,India,4128,2006,2006,10,SS[mz] mizoramSS,IA,South and Southeast Asia,South Asia
-178,IA52-R16,IA5,India,4169,2006,2006,10,SS[tr] tripuraSS,IA,South and Southeast Asia,South Asia
-179,IA52-R17,IA5,India,5259,2005,2006,10,SS[mg] meghalayaSS,IA,South and Southeast Asia,South Asia
-180,IA52-R18,IA5,India,8807,2005,2006,10,SS[as] assamSS,IA,South and Southeast Asia,South Asia
-181,IA52-R19,IA5,India,14775,2005,2006,10,SS[wb] west bengalSS,IA,South and Southeast Asia,South Asia
-182,IA52-R20,IA5,India,8129,2006,2006,10,SS[jh] jharkhandSS,IA,South and Southeast Asia,South Asia
-183,IA52-R21,IA5,India,10539,2005,2006,10,SS[or] orissaSS,IA,South and Southeast Asia,South Asia
-184,IA52-R22,IA5,India,9970,2005,2006,10,SS[ch] chhattisgarhSS,IA,South and Southeast Asia,South Asia
-185,IA52-R23,IA5,India,17097,2006,2006,10,SS[mp] madhya pradeshSS,IA,South and Southeast Asia,South Asia
-186,IA52-R24,IA5,India,8947,2005,2006,10,SS[gj] gujaratSS,IA,South and Southeast Asia,South Asia
-187,IA52-R27,IA5,India,19460,2005,2006,10,SS[mh] maharashtraSS,IA,South and Southeast Asia,South Asia
-188,IA52-R28,IA5,India,15800,2005,2006,10,SS[ap] andhra pradeshSS,IA,South and Southeast Asia,South Asia
-189,IA52-R29,IA5,India,13238,2006,2006,10,SS[ka] karnatakaSS,IA,South and Southeast Asia,South Asia
-190,IA52-R30,IA5,India,5910,2006,2006,10,SS[go] goaSS,IA,South and Southeast Asia,South Asia
-191,IA52-R32,IA5,India,6622,2006,2006,10,SS[ke] keralaSS,IA,South and Southeast Asia,South Asia
-192,IA52-R33,IA5,India,11808,2006,2006,10,SS[tn] tamil naduSS,IA,South and Southeast Asia,South Asia
-193,IA74,IA6,India,1315617,2015,2016,5,,IA,South and Southeast Asia,South Asia
-194,IA7E-R01,IA7,India,41193,2019,2020,10,SSjammu & kashmirSS,IA,South and Southeast Asia,South Asia
-195,IA7E-R02,IA7,India,19815,2019,2019,10,SShimachal pradeshSS,IA,South and Southeast Asia,South Asia
-196,IA7E-R03,IA7,India,40255,2020,2021,10,SSpunjabSS,IA,South and Southeast Asia,South Asia
-197,IA7E-R04,IA7,India,1410,2021,2021,10,SSchandigarhSS,IA,South and Southeast Asia,South Asia
-198,IA7E-R05,IA7,India,27636,2019,2021,10,SSuttarakhandSS,IA,South and Southeast Asia,South Asia
-199,IA7E-R06,IA7,India,44660,2020,2021,10,SSharyanaSS,IA,South and Southeast Asia,South Asia
-200,IA7E-R07,IA7,India,21235,2019,2021,10,SSnct of delhiSS,IA,South and Southeast Asia,South Asia
-201,IA7E-R08,IA7,India,91860,2019,2021,10,SSrajasthanSS,IA,South and Southeast Asia,South Asia
-202,IA7E-R09,IA7,India,215427,2019,2021,10,SSuttar pradeshSS,IA,South and Southeast Asia,South Asia
-203,IA7E-R10,IA7,India,110540,2019,2019,10,SSbiharSS,IA,South and Southeast Asia,South Asia
-204,IA7E-R11,IA7,India,5368,2019,2019,10,SSsikkimSS,IA,South and Southeast Asia,South Asia
-205,IA7E-R12,IA7,India,40043,2020,2021,10,SSarunachal pradeshSS,IA,South and Southeast Asia,South Asia
-206,IA7E-R13,IA7,India,20959,2019,2019,10,SSnagalandSS,IA,South and Southeast Asia,South Asia
-207,IA7E-R14,IA7,India,17075,2019,2019,10,SSmanipurSS,IA,South and Southeast Asia,South Asia
-208,IA7E-R15,IA7,India,14801,2019,2019,10,SSmizoramSS,IA,South and Southeast Asia,South Asia
-209,IA7E-R16,IA7,India,13197,2019,2019,10,SStripuraSS,IA,South and Southeast Asia,South Asia
-210,IA7E-R17,IA7,India,32537,2019,2019,10,SSmeghalayaSS,IA,South and Southeast Asia,South Asia
-211,IA7E-R18,IA7,India,68280,2019,2019,10,SSassamSS,IA,South and Southeast Asia,South Asia
-212,IA7E-R19,IA7,India,39737,2019,2019,10,SSwest bengalSS,IA,South and Southeast Asia,South Asia
-213,IA7E-R20,IA7,India,60469,2020,2021,10,SSjharkhandSS,IA,South and Southeast Asia,South Asia
-214,IA7E-R21,IA7,India,54530,2020,2021,10,SSodishaSS,IA,South and Southeast Asia,South Asia
-215,IA7E-R22,IA7,India,57988,2020,2021,10,SSchhattisgarhSS,IA,South and Southeast Asia,South Asia
-216,IA7E-R23,IA7,India,107820,2020,2021,10,SSmadhya pradeshSS,IA,South and Southeast Asia,South Asia
-217,IA7E-R24,IA7,India,67607,2019,2019,10,SSgujaratSS,IA,South and Southeast Asia,South Asia
-218,IA7E-R25,IA7,India,5196,2019,2019,10,SSdadra & nagar haveli and daman & diuSS,IA,South and Southeast Asia,South Asia
-219,IA7E-R27,IA7,India,66275,2019,2019,10,SSmaharashtraSS,IA,South and Southeast Asia,South Asia
-220,IA7E-R28,IA7,India,21135,2019,2019,10,SSandhra pradeshSS,IA,South and Southeast Asia,South Asia
-221,IA7E-R29,IA7,India,58286,2019,2019,10,SSkarnatakaSS,IA,South and Southeast Asia,South Asia
-222,IA7E-R30,IA7,India,3106,2019,2019,10,SSgoaSS,IA,South and Southeast Asia,South Asia
-223,IA7E-R31,IA7,India,2064,2019,2020,10,SSlakshadweepSS,IA,South and Southeast Asia,South Asia
-224,IA7E-R32,IA7,India,19033,2019,2019,10,SSkeralaSS,IA,South and Southeast Asia,South Asia
-225,IA7E-R33,IA7,India,46131,2020,2021,10,SStamil naduSS,IA,South and Southeast Asia,South Asia
-226,IA7E-R34,IA7,India,6239,2020,2021,10,SSpuducherrySS,IA,South and Southeast Asia,South Asia
-227,IA7E-R35,IA7,India,3979,2019,2020,10,SSandaman & nicobar islandsSS,IA,South and Southeast Asia,South Asia
-228,IA7E-R36,IA7,India,54528,2019,2019,10,SStelanganaSS,IA,South and Southeast Asia,South Asia
-229,IA7E-R37,IA7,India,3932,2019,2019,10,SSladakhSS,IA,South and Southeast Asia,South Asia
-230,IAAP42,IA3,India,10933,1998,1999,5,,IA,South and Southeast Asia,South Asia
-231,IAAR42,IA3,India,3219,1999,1999,5,,IA,South and Southeast Asia,South Asia
-232,IAAS42,IA3,India,9893,1999,1999,5,,IA,South and Southeast Asia,South Asia
-233,IABH42,IA3,India,23056,1998,1999,5,,IA,South and Southeast Asia,South Asia
-234,IADL42,IA3,India,6837,1999,1999,5,,IA,South and Southeast Asia,South Asia
-235,IAGJ42,IA3,India,10993,1998,1999,5,,IA,South and Southeast Asia,South Asia
-236,IAGO42,IA3,India,2878,1999,1999,5,,IA,South and Southeast Asia,South Asia
-237,IAHP42,IA3,India,8007,1999,1999,5,,IA,South and Southeast Asia,South Asia
-238,IAHR42,IA3,India,8781,1998,1999,5,,IA,South and Southeast Asia,South Asia
-239,IAJM42,IA3,India,9196,1999,1999,5,,IA,South and Southeast Asia,South Asia
-240,IAKA42,IA3,India,12215,1999,1999,5,,IA,South and Southeast Asia,South Asia
-241,IAKE42,IA3,India,6461,1999,1999,5,,IA,South and Southeast Asia,South Asia
-242,IAMG42,IA3,India,3480,1999,1999,5,,IA,South and Southeast Asia,South Asia
-243,IAMH42,IA3,India,14247,1999,1999,5,,IA,South and Southeast Asia,South Asia
-244,IAMN42,IA3,India,4763,1999,1999,5,,IA,South and Southeast Asia,South Asia
-245,IAMP42,IA3,India,23260,1998,1999,5,,IA,South and Southeast Asia,South Asia
-246,IAMZ42,IA3,India,3201,1999,1999,5,,IA,South and Southeast Asia,South Asia
-247,IANA42,IA3,India,2976,1999,1999,5,,IA,South and Southeast Asia,South Asia
-248,IAOR42,IA3,India,12529,1999,1999,5,,IA,South and Southeast Asia,South Asia
-249,IAPJ42,IA3,India,7661,1998,1999,5,,IA,South and Southeast Asia,South Asia
-250,IARJ42,IA3,India,22680,1998,1999,5,,IA,South and Southeast Asia,South Asia
-251,IASK42,IA3,India,3296,1998,1999,5,,IA,South and Southeast Asia,South Asia
-252,IATN42,IA3,India,11095,1999,1999,5,,IA,South and Southeast Asia,South Asia
-253,IATR42,IA3,India,2911,2000,2000,5,,IA,South and Southeast Asia,South Asia
-254,IAUP42,IA3,India,32933,1998,1999,5,,IA,South and Southeast Asia,South Asia
-255,IAWB42,IA3,India,11378,1998,1999,5,,IA,South and Southeast Asia,South Asia
-256,ID01,ID,Indonesia,39719,1987,1987,5,,ID,South and Southeast Asia,Southeast Asia
-257,ID21,ID2,Indonesia,74329,1991,1991,5,,ID,South and Southeast Asia,Southeast Asia
-258,ID31,ID3,Indonesia,90326,1994,1994,5,,ID,South and Southeast Asia,Southeast Asia
-259,ID3A,ID3,Indonesia,86276,1997,1997,5,,ID,South and Southeast Asia,Southeast Asia
-260,ID42,ID4,Indonesia,79791,2002,2003,5,,ID,South and Southeast Asia,Southeast Asia
-261,ID51,ID5,Indonesia,84726,2007,2007,5,,ID,South and Southeast Asia,Southeast Asia
-262,ID63,ID6,Indonesia,83650,2012,2012,5,,ID,South and Southeast Asia,Southeast Asia
-263,ID71,ID7,Indonesia,86265,2017,2017,5,,ID,South and Southeast Asia,Southeast Asia
-264,JO21,JO2,Jordan,32812,1990,1990,5,,JO,North Africa - West Asia - Europe,West Asia
-265,JO31,JO3,Jordan,24243,1997,1997,5,,JO,North Africa - West Asia - Europe,West Asia
-266,JO42,JO4,Jordan,25296,2002,2002,5,,JO,North Africa - West Asia - Europe,West Asia
-267,JO51,JO5,Jordan,43460,2007,2007,5,,JO,North Africa - West Asia - Europe,West Asia
-268,JO61,JO5,Jordan,38199,2009,2009,5,,JO,North Africa - West Asia - Europe,West Asia
-269,JO6C,JO6,Jordan,42275,2012,2012,5,,JO,North Africa - West Asia - Europe,West Asia
-270,JO74,JO7,Jordan,47040,2017,2018,5,,JO,North Africa - West Asia - Europe,West Asia
-271,JO81,JO8,Jordan,42962,2023,2023,5,,JO,North Africa - West Asia - Europe,West Asia
-272,KE03,KE,Kenya,25173,1988,1989,5,,KE,Sub-Saharan Africa,Eastern Africa
-273,KE33,KE2,Kenya,23899,1993,1993,5,,KE,Sub-Saharan Africa,Eastern Africa
-274,KE3A,KE3,Kenya,23351,1998,1998,5,,KE,Sub-Saharan Africa,Eastern Africa
-275,KE42,KE4,Kenya,22074,2003,2003,5,,KE,Sub-Saharan Africa,Eastern Africa
-276,KE52,KE5,Kenya,22534,2008,2009,5,,KE,Sub-Saharan Africa,Eastern Africa
-277,KE72,KE6,Kenya,83591,2014,2014,5,,KE,Sub-Saharan Africa,Eastern Africa
-278,KE8C,KE8,Kenya,77381,2022,2022,5,,KE,Sub-Saharan Africa,Eastern Africa
-279,KH42,KH4,Cambodia,40990,2000,2000,5,,KH,South and Southeast Asia,Southeast Asia
-280,KH51,KH5,Cambodia,40457,2005,2006,5,,KH,South and Southeast Asia,Southeast Asia
-281,KH61,KH5,Cambodia,37511,2010,2011,5,,KH,South and Southeast Asia,Southeast Asia
-282,KH73,KH6,Cambodia,33290,2014,2014,5,,KH,South and Southeast Asia,Southeast Asia
-283,KH82,KH8,Cambodia,34402,2021,2022,5,,KH,South and Southeast Asia,Southeast Asia
-284,KK31,KK3,Kazakhstan,6866,1995,1995,5,,KK,Central Asia,Central Asia
-285,KK42,KK3,Kazakhstan,8106,1999,1999,5,,KK,Central Asia,Central Asia
-286,KM32,KM3,Comoros,7913,1996,1996,5,,KM,Sub-Saharan Africa,Eastern Africa
-287,KM61,KM6,Comoros,11497,2012,2012,5,,KM,Sub-Saharan Africa,Eastern Africa
-288,KY31,KY3,Kyrgyz Republic,8781,1997,1997,5,,KY,Central Asia,Central Asia
-289,KY61,KY6,Kyrgyz Republic,16180,2012,2012,5,,KY,Central Asia,Central Asia
-290,LB01,LB,Liberia,17264,1986,1986,5,,LB,Sub-Saharan Africa,Western Africa
-291,LB51,LB5,Liberia,22123,2006,2007,5,,LB,Sub-Saharan Africa,Western Africa
-292,LB6A,LB6,Liberia,30804,2013,2013,5,,LB,Sub-Saharan Africa,Western Africa
-293,LB7A,LB7,Liberia,24765,2019,2020,5,,LB,Sub-Saharan Africa,Western Africa
-294,LK02,LK,Sri Lanka,17705,1987,1987,5,,LK,South and Southeast Asia,South Asia
-295,LS41,LS4,Lesotho,14708,2004,2005,5,,LS,Sub-Saharan Africa,Southern Africa
-296,LS61,LS5,Lesotho,14429,2009,2010,5,,LS,Sub-Saharan Africa,Southern Africa
-297,LS71,LS6,Lesotho,11710,2014,2014,5,,LS,Sub-Saharan Africa,Southern Africa
-298,LS81,LS8,Lesotho,10445,2023,2024,5,,LS,Sub-Saharan Africa,Southern Africa
-299,MA01,MA,Morocco,25518,1987,1987,5,,MA,North Africa - West Asia - Europe,North Africa
-300,MA21,MA2,Morocco,22657,1992,1992,5,,MA,North Africa - West Asia - Europe,North Africa
-301,MA43,MA4,Morocco,32494,2003,2004,5,,MA,North Africa - West Asia - Europe,North Africa
-302,MB53,MB4,Moldova,9903,2005,2005,5,,MB,North Africa - West Asia - Europe,Eastern Europe
-303,MD21,MD2,Madagascar,18931,1992,1992,5,,MD,Sub-Saharan Africa,Eastern Africa
-304,MD31,MD3,Madagascar,21653,1997,1997,5,,MD,Sub-Saharan Africa,Eastern Africa
-305,MD42,MD4,Madagascar,20799,2003,2004,5,,MD,Sub-Saharan Africa,Eastern Africa
-306,MD51,MD5,Madagascar,48464,2008,2009,5,,MD,Sub-Saharan Africa,Eastern Africa
-307,MD81,MD7,Madagascar,47720,2021,2021,5,,MD,Sub-Saharan Africa,Eastern Africa
-308,ML01,ML,Mali,12252,1987,1987,5,,ML,Sub-Saharan Africa,Western Africa
-309,ML32,ML3,Mali,37921,1995,1996,5,,ML,Sub-Saharan Africa,Western Africa
-310,ML41,ML4,Mali,48407,2001,2001,5,,ML,Sub-Saharan Africa,Western Africa
-311,ML53,ML5,Mali,52140,2006,2006,5,,ML,Sub-Saharan Africa,Western Africa
-312,ML6A,ML6,Mali,33803,2012,2013,5,,ML,Sub-Saharan Africa,Western Africa
-313,ML7A,ML7,Mali,33379,2018,2018,5,,ML,Sub-Saharan Africa,Western Africa
-314,MM71,MM7,Myanmar,22989,2015,2016,5,,MM,South and Southeast Asia,Southeast Asia
-315,MR71,MR7,Mauritania,39793,2019,2021,5,,MR,Sub-Saharan Africa,Western Africa
-316,MV52,MV5,Maldives,20136,2009,2009,5,,MV,South and Southeast Asia,South Asia
-317,MV71,MV7,Maldives,13922,2016,2017,5,,MV,South and Southeast Asia,South Asia
-318,MW22,MW2,Malawi,16330,1992,1992,5,,MW,Sub-Saharan Africa,Eastern Africa
-319,MW41,MW4,Malawi,40421,2000,2000,5,,MW,Sub-Saharan Africa,Eastern Africa
-320,MW4E,MW4,Malawi,35883,2004,2005,5,,MW,Sub-Saharan Africa,Eastern Africa
-321,MW61,MW5,Malawi,72301,2010,2010,5,,MW,Sub-Saharan Africa,Eastern Africa
-322,MW7A,MW7,Malawi,68074,2015,2016,5,,MW,Sub-Saharan Africa,Eastern Africa
-323,MX01,MX,Mexico,22676,1987,1987,5,,MX,Latin America and Caribbean,Central America
-324,MZ31,MZ3,Mozambique,25752,1997,1997,5,,MZ,Sub-Saharan Africa,Eastern Africa
-325,MZ41,MZ4,Mozambique,37443,2003,2004,5,,MZ,Sub-Saharan Africa,Eastern Africa
-326,MZ62,MZ6,Mozambique,37984,2011,2011,5,,MZ,Sub-Saharan Africa,Eastern Africa
-327,MZ81,MZ8,Mozambique,33900,2022,2023,5,,MZ,Sub-Saharan Africa,Eastern Africa
-328,NC31,NC3,Nicaragua,36820,1997,1998,5,,NC,Latin America and Caribbean,Central America
-329,NC41,NC4,Nicaragua,34157,2001,2001,5,,NC,Latin America and Caribbean,Central America
-330,NG21,NG2,Nigeria,28123,1990,1990,5,,NG,Sub-Saharan Africa,Western Africa
-331,NG4B,NG4,Nigeria,23038,2003,2003,5,,NG,Sub-Saharan Africa,Western Africa
-332,NG53,NG5,Nigeria,104808,2008,2008,5,,NG,Sub-Saharan Africa,Western Africa
-333,NG6A,NG6,Nigeria,119386,2013,2013,5,,NG,Sub-Saharan Africa,Western Africa
-334,NG7B,NG7,Nigeria,127545,2018,2018,5,,NG,Sub-Saharan Africa,Western Africa
-335,NI22,NI2,Niger,23841,1992,1992,5,,NI,Sub-Saharan Africa,Western Africa
-336,NI31,NI3,Niger,28888,1998,1998,5,,NI,Sub-Saharan Africa,Western Africa
-337,NI51,NI5,Niger,34378,2006,2006,5,,NI,Sub-Saharan Africa,Western Africa
-338,NI61,NI6,Niger,44183,2012,2012,5,,NI,Sub-Saharan Africa,Western Africa
-339,NM21,NM2,Namibia,13372,1992,1992,5,,NM,Sub-Saharan Africa,Southern Africa
-340,NM41,NM4,Namibia,14946,2000,2000,5,,NM,Sub-Saharan Africa,Southern Africa
-341,NM51,NM5,Namibia,19522,2006,2007,5,,NM,Sub-Saharan Africa,Southern Africa
-342,NM61,NM6,Namibia,18090,2013,2013,5,,NM,Sub-Saharan Africa,Southern Africa
-343,NP31,NP3,Nepal,29156,1952,1953,5,,NP,South and Southeast Asia,South Asia
-344,NP41,NP4,Nepal,28955,2057,2058,5,,NP,South and Southeast Asia,South Asia
-345,NP51,NP5,Nepal,26394,2062,2063,5,,NP,South and Southeast Asia,South Asia
-346,NP61,NP6,Nepal,26615,2067,2068,5,,NP,South and Southeast Asia,South Asia
-347,NP7H,NP7,Nepal,26028,2073,2073,5,,NP,South and Southeast Asia,South Asia
-348,NP82,NP8,Nepal,27613,2078,2079,5,,NP,South and Southeast Asia,South Asia
-349,OS01,OS,Nigeria (Ondo State),6091,1986,1987,5,,OS,Sub-Saharan Africa,Western Africa
-350,PE01,PE,Peru,13291,1986,1986,5,,PE,Latin America and Caribbean,South America
-351,PE21,PE2,Peru,38783,1991,1992,5,,PE,Latin America and Caribbean,South America
-352,PE31,PE3,Peru,72390,1996,1996,5,,PE,Latin America and Caribbean,South America
-353,PE41,PE4,Peru,65453,2000,2000,5,,PE,Latin America and Caribbean,South America
-354,PE51,PE5,Peru,89220,2003,2008,5,,PE,Latin America and Caribbean,South America
-355,PE5I,PE6,Peru,50084,2009,2009,5,,PE,Latin America and Caribbean,South America
-356,PE61,PE6,Peru,46780,2010,2010,5,,PE,Latin America and Caribbean,South America
-357,PE6A,PE6,Peru,46194,2011,2011,5,,PE,Latin America and Caribbean,South America
-358,PE6I,PE6,Peru,47261,2012,2012,5,,PE,Latin America and Caribbean,South America
-359,PG71,PG7,Papua New Guinea,34561,2016,2018,5,,PG,Oceania,Pacific Islands
-360,PH31,PH2,Philippines,35863,1993,1993,5,,PH,South and Southeast Asia,Southeast Asia
-361,PH3B,PH3,Philippines,32626,1998,1998,5,,PH,South and Southeast Asia,Southeast Asia
-362,PH41,PH4,Philippines,30443,2003,2003,5,,PH,South and Southeast Asia,Southeast Asia
-363,PH52,PH5,Philippines,28518,2008,2008,5,,PH,South and Southeast Asia,Southeast Asia
-364,PH61,PH6,Philippines,31680,2013,2013,5,,PH,South and Southeast Asia,Southeast Asia
-365,PH71,PH7,Philippines,47244,2017,2017,5,,PH,South and Southeast Asia,Southeast Asia
-366,PH82,PH8,Philippines,45633,2022,2022,5,,PH,South and Southeast Asia,Southeast Asia
-367,PK21,PK2,Pakistan,27369,1990,1991,5,,PK,South and Southeast Asia,South Asia
-368,PK53,PK5,Pakistan,39049,2006,2007,5,,PK,South and Southeast Asia,South Asia
-369,PK61,PK6,Pakistan,50238,2012,2013,5,,PK,South and Southeast Asia,South Asia
-370,PK71,PK7,Pakistan,50495,2017,2018,5,,PK,South and Southeast Asia,South Asia
-371,PY21,PY2,Paraguay,15346,1990,1990,5,,PY,Latin America and Caribbean,South America
-372,RW21,RW2,Rwanda,19440,1992,1992,5,,RW,Sub-Saharan Africa,Eastern Africa
-373,RW41,RW4,Rwanda,27602,2000,2000,5,,RW,Sub-Saharan Africa,Eastern Africa
-374,RW53,RW4,Rwanda,30072,2005,2005,5,,RW,Sub-Saharan Africa,Eastern Africa
-375,RW5A,RW5,Rwanda,18421,2007,2008,5,,RW,Sub-Saharan Africa,Eastern Africa
-376,RW61,RW6,Rwanda,32639,2010,2011,5,,RW,Sub-Saharan Africa,Eastern Africa
-377,RW70,RW6,Rwanda,30058,2014,2015,5,,RW,Sub-Saharan Africa,Eastern Africa
-378,RW81,RW7,Rwanda,30820,2019,2020,5,,RW,Sub-Saharan Africa,Eastern Africa
-379,SD02,SD,Sudan,25805,1989,1990,5,,SD,Sub-Saharan Africa,Eastern Africa
-380,SL51,SL5,Sierra Leone,21136,2008,2008,5,,SL,Sub-Saharan Africa,Western Africa
-381,SL61,SL6,Sierra Leone,47392,2013,2013,5,,SL,Sub-Saharan Africa,Western Africa
-382,SL7A,SL7,Sierra Leone,40543,2019,2019,5,,SL,Sub-Saharan Africa,Western Africa
-383,SN02,SN,Senegal,14389,1986,1986,5,,SN,Sub-Saharan Africa,Western Africa
-384,SN21,SN2,Senegal,20815,1992,1993,5,,SN,Sub-Saharan Africa,Western Africa
-385,SN32,SN2,Senegal,27448,1997,1997,5,,SN,Sub-Saharan Africa,Western Africa
-386,SN4A,SN4,Senegal,39895,2005,2005,5,,SN,Sub-Saharan Africa,Western Africa
-387,SN61,SN6,Senegal,42510,2010,2011,5,,SN,Sub-Saharan Africa,Western Africa
-388,SN6D,SN6,Senegal,22563,2012,2013,5,,SN,Sub-Saharan Africa,Western Africa
-389,SN6R,SN6,Senegal,44928,2012,2014,5,,SN,Sub-Saharan Africa,Western Africa
-390,SN71,SN6,Senegal,22365,2014,2014,5,,SN,Sub-Saharan Africa,Western Africa
-391,SN7A,SN6,Senegal,23250,2015,2015,5,,SN,Sub-Saharan Africa,Western Africa
-392,SN7I,SN6,Senegal,22740,2016,2016,5,,SN,Sub-Saharan Africa,Western Africa
-393,SN7Z,SN7,Senegal,42944,2017,2017,5,,SN,Sub-Saharan Africa,Western Africa
-394,SN81,SN7,Senegal,23913,2018,2018,5,,SN,Sub-Saharan Africa,Western Africa
-395,SN8B,SN7,Senegal,21562,2019,2019,5,,SN,Sub-Saharan Africa,Western Africa
-396,SN8S,SN8,Senegal,39490,2023,2023,5,,SN,Sub-Saharan Africa,Western Africa
-397,SNG0,SN6,Senegal,45990,2015,2016,5,,SN,Sub-Saharan Africa,Western Africa
-398,ST51,ST5,Sao Tome and Principe,7620,2008,2009,5,,ST,Sub-Saharan Africa,Middle Africa
-399,SZ51,SZ5,Eswatini,11410,2006,2007,5,,SZ,Sub-Saharan Africa,Southern Africa
-400,TD31,TD3,Chad,25739,1996,1997,5,,TD,Sub-Saharan Africa,Middle Africa
-401,TD41,TD4,Chad,21448,2004,2004,5,,TD,Sub-Saharan Africa,Middle Africa
-402,TD71,TD6,Chad,68989,2014,2015,5,,TD,Sub-Saharan Africa,Middle Africa
-403,TG01,TG,Togo,10782,1988,1988,5,,TG,Sub-Saharan Africa,Western Africa
-404,TG31,TG3,Togo,26269,1998,1998,5,,TG,Sub-Saharan Africa,Western Africa
-405,TG61,TG6,Togo,26264,2013,2014,5,,TG,Sub-Saharan Africa,Western Africa
-406,TH01,TH,Thailand,17803,1987,1987,5,,TH,South and Southeast Asia,Southeast Asia
-407,TJ61,TJ6,Tajikistan,19938,2012,2012,5,,TJ,Central Asia,Central Asia
-408,TJ72,TJ7,Tajikistan,21985,2017,2017,5,,TJ,Central Asia,Central Asia
-409,TL61,TL5,Timor-Leste,35998,2009,2010,5,,TL,South and Southeast Asia,Southeast Asia
-410,TL71,TL7,Timor-Leste,28682,2016,2016,5,,TL,South and Southeast Asia,Southeast Asia
-411,TN02,TN,Tunisia,16463,1988,1988,5,,TN,North Africa - West Asia - Europe,North Africa
-412,TR31,TR2,Turkey,19762,1993,1993,5,,TR,North Africa - West Asia - Europe,West Asia
-413,TR41,TR3,Turkey,17791,1998,1998,5,,TR,North Africa - West Asia - Europe,West Asia
-414,TR4A,TR4,Turkey,22443,2003,2004,5,,TR,North Africa - West Asia - Europe,West Asia
-415,TR51,TR5,Turkey,19678,2008,2008,5,,TR,North Africa - West Asia - Europe,West Asia
-416,TR62,TR6,Turkey,17871,2013,2013,5,,TR,North Africa - West Asia - Europe,West Asia
-417,TR71,TR7,Turkey,13367,2018,2019,5,,TR,North Africa - West Asia - Europe,West Asia
-418,TT01,TT,Trinidad and Tobago,7837,1987,1987,5,,TT,Latin America and Caribbean,Caribbean
-419,TZ21,TZ2,Tanzania,29143,1991,1992,5,,TZ,Sub-Saharan Africa,Eastern Africa
-420,TZ3A,TZ3,Tanzania,24890,1996,1996,5,,TZ,Sub-Saharan Africa,Eastern Africa
-421,TZ41,TZ3,Tanzania,11952,1999,1999,5,,TZ,Sub-Saharan Africa,Eastern Africa
-422,TZ4I,TZ4,Tanzania,30557,2004,2005,5,,TZ,Sub-Saharan Africa,Eastern Africa
-423,TZ63,TZ5,Tanzania,29777,2009,2010,5,,TZ,Sub-Saharan Africa,Eastern Africa
-424,TZ7B,TZ7,Tanzania,37169,2015,2016,5,,TZ,Sub-Saharan Africa,Eastern Africa
-425,TZ82,TZ8,Tanzania,40394,2022,2022,5,,TZ,Sub-Saharan Africa,Eastern Africa
-426,UA51,UA5,Ukraine,8007,2007,2007,5,,UA,North Africa - West Asia - Europe,Eastern Europe
-427,UG01,UG,Uganda,16074,1988,1989,5,,UG,Sub-Saharan Africa,Eastern Africa
-428,UG33,UG3,Uganda,22752,1995,1995,5,,UG,Sub-Saharan Africa,Eastern Africa
-429,UG41,UG4,Uganda,23410,2000,2001,5,,UG,Sub-Saharan Africa,Eastern Africa
-430,UG52,UG5,Uganda,30090,2006,2006,5,,UG,Sub-Saharan Africa,Eastern Africa
-431,UG61,UG6,Uganda,28609,2011,2011,5,,UG,Sub-Saharan Africa,Eastern Africa
-432,UG7B,UG7,Uganda,57906,2016,2016,5,,UG,Sub-Saharan Africa,Eastern Africa
-433,UZ31,UZ3,Uzbekistan,9650,1996,1996,5,,UZ,Central Asia,Central Asia
-434,VN31,VNT,Vietnam,15517,1997,1997,5,,VN,South and Southeast Asia,Southeast Asia
-435,VN41,VNT,Vietnam,14383,2002,2002,5,,VN,South and Southeast Asia,Southeast Asia
-436,YE21,YE2,Yemen,29803,1991,1992,5,,YE,North Africa - West Asia - Europe,West Asia
-437,YE61,YE6,Yemen,64602,2013,2013,5,,YE,North Africa - West Asia - Europe,West Asia
-438,ZA31,ZA3,South Africa,22934,1998,1998,5,,ZA,Sub-Saharan Africa,Southern Africa
-439,ZA71,ZA7,South Africa,14144,2016,2016,5,,ZA,Sub-Saharan Africa,Southern Africa
-440,ZM21,ZM2,Zambia,22122,1992,1992,5,,ZM,Sub-Saharan Africa,Eastern Africa
-441,ZM31,ZM3,Zambia,24799,1996,1997,5,,ZM,Sub-Saharan Africa,Eastern Africa
-442,ZM42,ZM4,Zambia,23805,2001,2002,5,,ZM,Sub-Saharan Africa,Eastern Africa
-443,ZM51,ZM5,Zambia,21366,2007,2007,5,,ZM,Sub-Saharan Africa,Eastern Africa
-444,ZM61,ZM6,Zambia,49207,2013,2014,5,,ZM,Sub-Saharan Africa,Eastern Africa
-445,ZM71,ZM7,Zambia,38446,2018,2019,5,,ZM,Sub-Saharan Africa,Eastern Africa
-446,ZW01,ZW,Zimbabwe,12405,1988,1989,5,,ZW,Sub-Saharan Africa,Eastern Africa
-447,ZW31,ZW3,Zimbabwe,16777,1994,1994,5,,ZW,Sub-Saharan Africa,Eastern Africa
-448,ZW42,ZW4,Zimbabwe,14184,1999,1999,5,,ZW,Sub-Saharan Africa,Eastern Africa
-449,ZW52,ZW5,Zimbabwe,19489,2005,2006,5,,ZW,Sub-Saharan Africa,Eastern Africa
-450,ZW62,ZW6,Zimbabwe,19279,2010,2011,5,,ZW,Sub-Saharan Africa,Eastern Africa
-451,ZW72,ZW7,Zimbabwe,20791,2015,2015,5,,ZW,Sub-Saharan Africa,Eastern Africa
+9,AO81,AO8,Angola,37767,2023,2024,5,,AO,Sub-Saharan Africa,Middle Africa
+10,AZ52,AZ5,Azerbaijan,13565,2006,2006,5,,AZ,North Africa - West Asia - Europe,West Asia
+11,BD31,BD3,Bangladesh,32590,1993,1994,5,,BD,South and Southeast Asia,South Asia
+12,BD3A,BD3,Bangladesh,29366,1996,1997,5,,BD,South and Southeast Asia,South Asia
+13,BD41,BD3,Bangladesh,31925,1999,2000,5,,BD,South and Southeast Asia,South Asia
+14,BD4J,BD4,Bangladesh,33605,2004,2004,5,,BD,South and Southeast Asia,South Asia
+15,BD51,BD5,Bangladesh,30527,2007,2007,5,,BD,South and Southeast Asia,South Asia
+16,BD61,BD6,Bangladesh,45844,2011,2011,5,,BD,South and Southeast Asia,South Asia
+17,BD72,BD6,Bangladesh,43772,2014,2014,5,,BD,South and Southeast Asia,South Asia
+18,BD7R,BD7,Bangladesh,47828,2017,2018,5,,BD,South and Southeast Asia,South Asia
+19,BD81,BD8,Bangladesh,64722,2022,2022,5,,BD,South and Southeast Asia,South Asia
+20,BF21,BF2,Burkina Faso,20655,1992,1993,5,,BF,Sub-Saharan Africa,Western Africa
+21,BF31,BF3,Burkina Faso,22145,1998,1999,5,,BF,Sub-Saharan Africa,Western Africa
+22,BF43,BF4,Burkina Faso,41520,2003,2003,5,,BF,Sub-Saharan Africa,Western Africa
+23,BF62,BF6,Burkina Faso,56178,2010,2010,5,,BF,Sub-Saharan Africa,Western Africa
+24,BF81,BF8,Burkina Faso,48745,2021,2021,5,,BF,Sub-Saharan Africa,Western Africa
+25,BJ31,BJ3,Benin,19359,1996,1996,5,,BJ,Sub-Saharan Africa,Western Africa
+26,BJ41,BJ4,Benin,19398,2001,2001,5,,BJ,Sub-Saharan Africa,Western Africa
+27,BJ51,BJ5,Benin,57232,2006,2006,5,,BJ,Sub-Saharan Africa,Western Africa
+28,BJ61,BJ6,Benin,47152,2011,2012,5,,BJ,Sub-Saharan Africa,Western Africa
+29,BJ71,BJ7,Benin,45853,2017,2018,5,,BJ,Sub-Saharan Africa,Western Africa
+30,BO01,BO,Bolivia,22338,1989,1989,5,,BO,Latin America and Caribbean,South America
+31,BO31,BO3,Bolivia,24174,1993,1994,5,,BO,Latin America and Caribbean,South America
+32,BO3B,BO3,Bolivia,29473,1998,1998,5,,BO,Latin America and Caribbean,South America
+33,BO41,BO4,Bolivia,45116,2003,2004,5,,BO,Latin America and Caribbean,South America
+34,BO51,BO5,Bolivia,40355,2008,2008,5,,BO,Latin America and Caribbean,South America
+35,BR01,BR,Brazil,12356,1986,1986,5,,BR,Latin America and Caribbean,South America
+36,BR21,BR2,Brazil,15363,1991,1992,5,,BR,Latin America and Caribbean,South America
+37,BR31,BR3,Brazil,25513,1996,1996,5,,BR,Latin America and Caribbean,South America
+38,BU01,BU,Burundi,11886,1987,1987,5,,BU,Sub-Saharan Africa,Eastern Africa
+39,BU61,BU6,Burundi,24520,2010,2011,5,,BU,Sub-Saharan Africa,Eastern Africa
+40,BU71,BU7,Burundi,45419,2016,2017,5,,BU,Sub-Saharan Africa,Eastern Africa
+41,CD51,CD5,Congo Democratic Republic,29548,2007,2007,5,,CD,Sub-Saharan Africa,Middle Africa
+42,CD61,CD6,Congo Democratic Republic,59276,2013,2014,5,,CD,Sub-Saharan Africa,Middle Africa
+43,CD81,CD8,Congo Democratic Republic,80890,2023,2024,5,,CD,Sub-Saharan Africa,Middle Africa
+44,CF31,CF3,Central African Republic,16936,1994,1995,5,,CF,Sub-Saharan Africa,Middle Africa
+45,CG51,CG5,Congo,16687,2005,2005,5,,CG,Sub-Saharan Africa,Middle Africa
+46,CG61,CG6,Congo,31948,2011,2012,5,,CG,Sub-Saharan Africa,Middle Africa
+47,CI35,CI3,Cote d'Ivoire,24870,1994,1994,5,,CI,Sub-Saharan Africa,Western Africa
+48,CI3A,CI3,Cote d'Ivoire,7575,1998,1999,5,,CI,Sub-Saharan Africa,Western Africa
+49,CI62,CI6,Cote d'Ivoire,28211,2011,2012,5,,CI,Sub-Saharan Africa,Western Africa
+50,CI81,CI8,Cote d'Ivoire,39979,2021,2021,5,,CI,Sub-Saharan Africa,Western Africa
+51,CM22,CM2,Cameroon,11612,1991,1991,5,,CM,Sub-Saharan Africa,Middle Africa
+52,CM31,CM3,Cameroon,15187,1998,1998,5,,CM,Sub-Saharan Africa,Middle Africa
+53,CM44,CM4,Cameroon,29455,2004,2004,5,,CM,Sub-Saharan Africa,Middle Africa
+54,CM61,CM6,Cameroon,42312,2011,2011,5,,CM,Sub-Saharan Africa,Middle Africa
+55,CM71,CM7,Cameroon,33988,2018,2019,5,,CM,Sub-Saharan Africa,Middle Africa
+56,CO01,CO,Colombia,11622,1986,1986,5,,CO,Latin America and Caribbean,South America
+57,CO22,CO2,Colombia,15976,1990,1990,5,,CO,Latin America and Caribbean,South America
+58,CO31,CO3,Colombia,21830,1995,1995,5,,CO,Latin America and Caribbean,South America
+59,CO41,CO4,Colombia,21267,2000,2000,5,,CO,Latin America and Caribbean,South America
+60,CO53,CO4,Colombia,71278,2004,2005,5,,CO,Latin America and Caribbean,South America
+61,CO61,CO5,Colombia,91399,2009,2010,5,,CO,Latin America and Caribbean,South America
+62,CO72,CO7,Colombia,62593,2015,2016,5,,CO,Latin America and Caribbean,South America
+63,DR01,DR,Dominican Republic,20151,1986,1986,5,,DR,Latin America and Caribbean,Caribbean
+64,DR21,DR2,Dominican Republic,17163,1991,1991,5,,DR,Latin America and Caribbean,Caribbean
+65,DR32,DR3,Dominican Republic,19784,1996,1996,5,,DR,Latin America and Caribbean,Caribbean
+66,DR41,DR3,Dominican Republic,2871,1999,1999,5,,DR,Latin America and Caribbean,Caribbean
+67,DR4B,DR4,Dominican Republic,53667,2002,2002,5,,DR,Latin America and Caribbean,Caribbean
+68,DR52,DR5,Dominican Republic,58037,2007,2007,5,,DR,Latin America and Caribbean,Caribbean
+69,DR5A,DR5,Dominican Republic,4385,2007,2007,5,,DR,Latin America and Caribbean,Caribbean
+70,DR61,DR6,Dominican Republic,18167,2013,2013,5,,DR,Latin America and Caribbean,Caribbean
+71,DR6A,DR6,Dominican Republic,4313,2013,2013,5,,DR,Latin America and Caribbean,Caribbean
+72,EC01,EC,Ecuador,11835,1987,1987,5,,EC,Latin America and Caribbean,South America
+73,EG01,EG,Egypt,35519,1988,1989,5,,EG,North Africa - West Asia - Europe,North Africa
+74,EG21,EG2,Egypt,38076,1992,1993,5,,EG,North Africa - West Asia - Europe,North Africa
+75,EG33,EG3,Egypt,56381,1995,1996,5,,EG,North Africa - West Asia - Europe,North Africa
+76,EG42,EG4,Egypt,54780,2000,2000,5,,EG,North Africa - West Asia - Europe,North Africa
+77,EG4A,EG4,Egypt,30298,2003,2003,5,,EG,North Africa - West Asia - Europe,North Africa
+78,EG51,EG4,Egypt,61455,2005,2005,5,,EG,North Africa - West Asia - Europe,North Africa
+79,EG5A,EG5,Egypt,48619,2008,2008,5,,EG,North Africa - West Asia - Europe,North Africa
+80,EG61,EG6,Egypt,59266,2014,2014,5,,EG,North Africa - West Asia - Europe,North Africa
+81,ES01,ES,El Salvador,6383,1985,1985,5,,ES,Latin America and Caribbean,Central America
+82,ET41,ET4,Ethiopia,44174,1992,1992,5,,ET,Sub-Saharan Africa,Eastern Africa
+83,ET51,ET4,Ethiopia,39881,1997,1997,5,,ET,Sub-Saharan Africa,Eastern Africa
+84,ET61,ET6,Ethiopia,45540,2003,2003,5,,ET,Sub-Saharan Africa,Eastern Africa
+85,ET71,ET7,Ethiopia,41392,2008,2008,5,,ET,Sub-Saharan Africa,Eastern Africa
+86,ET81,ET7,Ethiopia,23007,2011,2011,5,,ET,Sub-Saharan Africa,Eastern Africa
+87,ET8A,ET8,Ethiopia,52434,2024,2025,5,,ET,Sub-Saharan Africa,Eastern Africa
+88,GA41,GA3,Gabon,16878,2000,2001,5,,GA,Sub-Saharan Africa,Middle Africa
+89,GA61,GA6,Gabon,23109,2012,2012,5,,GA,Sub-Saharan Africa,Middle Africa
+90,GA71,GA7,Gabon,23232,2019,2021,5,,GA,Sub-Saharan Africa,Middle Africa
+91,GH02,GH,Ghana,14216,1988,1988,5,,GH,Sub-Saharan Africa,Western Africa
+92,GH31,GH2,Ghana,13298,1993,1994,5,,GH,Sub-Saharan Africa,Western Africa
+93,GH41,GH3,Ghana,13188,1998,1999,5,,GH,Sub-Saharan Africa,Western Africa
+94,GH4B,GH4,Ghana,15086,2003,2003,5,,GH,Sub-Saharan Africa,Western Africa
+95,GH5A,GH5,Ghana,11888,2008,2008,5,,GH,Sub-Saharan Africa,Western Africa
+96,GH72,GH6,Ghana,23118,2014,2014,5,,GH,Sub-Saharan Africa,Western Africa
+97,GH8C,GH8,Ghana,34663,2022,2023,5,,GH,Sub-Saharan Africa,Western Africa
+98,GM61,GM6,Gambia,26601,2013,2013,5,,GM,Sub-Saharan Africa,Western Africa
+99,GM81,GM7,Gambia,31665,2019,2020,5,,GM,Sub-Saharan Africa,Western Africa
+100,GN41,GN3,Guinea,22943,1999,1999,5,,GN,Sub-Saharan Africa,Western Africa
+101,GN52,GN4,Guinea,27115,2005,2005,5,,GN,Sub-Saharan Africa,Western Africa
+102,GN62,GN6,Guinea,27683,2012,2012,5,,GN,Sub-Saharan Africa,Western Africa
+103,GN71,GN7,Guinea,28887,2018,2018,5,,GN,Sub-Saharan Africa,Western Africa
+104,GU01,GU,Guatemala,14698,1987,1987,5,,GU,Latin America and Caribbean,Central America
+105,GU34,GU3,Guatemala,38753,1995,1995,5,,GU,Latin America and Caribbean,Central America
+106,GU41,GU3,Guatemala,18581,1998,1999,5,,GU,Latin America and Caribbean,Central America
+107,GU71,GU6,Guatemala,55398,2014,2015,5,,GU,Latin America and Caribbean,Central America
+108,GY5I,GY5,Guyana,10929,2009,2009,5,,GY,Latin America and Caribbean,South America
+109,HN52,HN5,Honduras,50093,2005,2006,5,,HN,Latin America and Caribbean,Central America
+110,HN62,HN6,Honduras,49263,2011,2012,5,,HN,Latin America and Caribbean,Central America
+111,HT31,HT3,Haiti,12547,1994,1995,5,,HT,Latin America and Caribbean,Caribbean
+112,HT42,HT4,Haiti,26437,2000,2000,5,,HT,Latin America and Caribbean,Caribbean
+113,HT52,HT5,Haiti,24830,2005,2006,5,,HT,Latin America and Caribbean,Caribbean
+114,HT61,HT6,Haiti,29013,2012,2012,5,,HT,Latin America and Caribbean,Caribbean
+115,HT71,HT7,Haiti,27809,2016,2017,5,,HT,Latin America and Caribbean,Caribbean
+116,IA23-R02,IA2,India,12133,1992,1992,10,SSandhra pradeshSS,IA,South and Southeast Asia,South Asia
+117,IA23-R03,IA2,India,10698,1992,1993,10,SSassamSS,IA,South and Southeast Asia,South Asia
+118,IA23-R04,IA2,India,19936,1993,1993,10,SSbiharSS,IA,South and Southeast Asia,South Asia
+119,IA23-R05,IA2,India,8970,1992,1993,10,SSgoaSS,IA,South and Southeast Asia,South Asia
+120,IA23-R06,IA2,India,11682,1993,1993,10,SSgujaratSS,IA,South and Southeast Asia,South Asia
+121,IA23-R07,IA2,India,9155,1993,1993,10,SSharyanaSS,IA,South and Southeast Asia,South Asia
+122,IA23-R08,IA2,India,8815,1992,1992,10,SShimachal pradeshSS,IA,South and Southeast Asia,South Asia
+123,IA23-R09,IA2,India,8702,1993,1993,10,SSjammuSS,IA,South and Southeast Asia,South Asia
+124,IA23-R10,IA2,India,13974,1992,1993,10,SSkarnatakaSS,IA,South and Southeast Asia,South Asia
+125,IA23-R11,IA2,India,11220,1992,1993,10,SSkeralaSS,IA,South and Southeast Asia,South Asia
+126,IA23-R12,IA2,India,20825,1992,1992,10,SSmadhya pradeshSS,IA,South and Southeast Asia,South Asia
+127,IA23-R13,IA2,India,12374,1992,1993,10,SSmaharashtraSS,IA,South and Southeast Asia,South Asia
+128,IA23-R14,IA2,India,3291,1993,1993,10,SSmanipurSS,IA,South and Southeast Asia,South Asia
+129,IA23-R15,IA2,India,3695,1993,1993,10,SSmeghalayaSS,IA,South and Southeast Asia,South Asia
+130,IA23-R16,IA2,India,3204,1993,1993,10,SSmizoramSS,IA,South and Southeast Asia,South Asia
+131,IA23-R17,IA2,India,3672,1993,1993,10,SSnagalandSS,IA,South and Southeast Asia,South Asia
+132,IA23-R18,IA2,India,13409,1993,1993,10,SSorissaSS,IA,South and Southeast Asia,South Asia
+133,IA23-R19,IA2,India,9132,1993,1993,10,SSpunjabSS,IA,South and Southeast Asia,South Asia
+134,IA23-R20,IA2,India,17085,1992,1993,10,SSrajasthanSS,IA,South and Southeast Asia,South Asia
+135,IA23-R22,IA2,India,11139,1992,1992,10,SStamil naduSS,IA,South and Southeast Asia,South Asia
+136,IA23-R23,IA2,India,13579,1992,1992,10,SSwest bengalSS,IA,South and Southeast Asia,South Asia
+137,IA23-R24,IA2,India,42209,1992,1993,10,SSuttar pradeshSS,IA,South and Southeast Asia,South Asia
+138,IA23-R30,IA2,India,10208,1993,1993,10,SSnew delhiSS,IA,South and Southeast Asia,South Asia
+139,IA23-R34,IA2,India,2818,1993,1993,10,SSarunachalpradeshSS,IA,South and Southeast Asia,South Asia
+140,IA23-R35,IA2,India,3674,1993,1993,10,SStripuraSS,IA,South and Southeast Asia,South Asia
+141,IA42-R02,IA3,India,11399,1998,1999,10,SSandhra pradeshSS,IA,South and Southeast Asia,South Asia
+142,IA42-R03,IA3,India,10268,1999,1999,10,SSassamSS,IA,South and Southeast Asia,South Asia
+143,IA42-R04,IA3,India,23955,1998,1999,10,SSbiharSS,IA,South and Southeast Asia,South Asia
+144,IA42-R05,IA3,India,3030,1999,1999,10,SSgoaSS,IA,South and Southeast Asia,South Asia
+145,IA42-R06,IA3,India,11395,1998,1999,10,SSgujaratSS,IA,South and Southeast Asia,South Asia
+146,IA42-R07,IA3,India,9002,1998,1999,10,SSharyanaSS,IA,South and Southeast Asia,South Asia
+147,IA42-R08,IA3,India,8242,1999,1999,10,SShimachal pradeshSS,IA,South and Southeast Asia,South Asia
+148,IA42-R09,IA3,India,9390,1999,1999,10,SSjammuSS,IA,South and Southeast Asia,South Asia
+149,IA42-R10,IA3,India,12664,1999,1999,10,SSkarnatakaSS,IA,South and Southeast Asia,South Asia
+150,IA42-R11,IA3,India,6753,1999,1999,10,SSkeralaSS,IA,South and Southeast Asia,South Asia
+151,IA42-R12,IA3,India,24077,1998,1999,10,SSmadhya pradeshSS,IA,South and Southeast Asia,South Asia
+152,IA42-R13,IA3,India,14828,1999,1999,10,SSmaharashtraSS,IA,South and Southeast Asia,South Asia
+153,IA42-R14,IA3,India,4864,1999,1999,10,SSmanipurSS,IA,South and Southeast Asia,South Asia
+154,IA42-R15,IA3,India,3524,1999,1999,10,SSmeghalayaSS,IA,South and Southeast Asia,South Asia
+155,IA42-R16,IA3,India,3268,1999,1999,10,SSmizoramSS,IA,South and Southeast Asia,South Asia
+156,IA42-R17,IA3,India,3036,1999,1999,10,SSnagalandSS,IA,South and Southeast Asia,South Asia
+157,IA42-R18,IA3,India,13009,1999,1999,10,SSorissaSS,IA,South and Southeast Asia,South Asia
+158,IA42-R19,IA3,India,7888,1998,1999,10,SSpunjabSS,IA,South and Southeast Asia,South Asia
+159,IA42-R20,IA3,India,23458,1998,1999,10,SSrajasthanSS,IA,South and Southeast Asia,South Asia
+160,IA42-R21,IA3,India,3384,1998,1999,10,SSsikkimSS,IA,South and Southeast Asia,South Asia
+161,IA42-R22,IA3,India,11585,1999,1999,10,SStamil naduSS,IA,South and Southeast Asia,South Asia
+162,IA42-R23,IA3,India,11859,1998,1999,10,SSwest bengalSS,IA,South and Southeast Asia,South Asia
+163,IA42-R24,IA3,India,34051,1998,1999,10,SSuttar pradeshSS,IA,South and Southeast Asia,South Asia
+164,IA42-R30,IA3,India,7037,1999,1999,10,SSnew delhiSS,IA,South and Southeast Asia,South Asia
+165,IA42-R34,IA3,India,3321,1999,1999,10,SSarunachalpradeshSS,IA,South and Southeast Asia,South Asia
+166,IA42-R35,IA3,India,3023,2000,2000,10,SStripuraSS,IA,South and Southeast Asia,South Asia
+167,IA52-R01,IA5,India,7674,2006,2006,10,SS[jm] jammu and kashmirSS,IA,South and Southeast Asia,South Asia
+168,IA52-R02,IA5,India,6619,2006,2006,10,SS[hp] himachal pradeshSS,IA,South and Southeast Asia,South Asia
+169,IA52-R03,IA5,India,8150,2005,2006,10,SS[pj] punjabSS,IA,South and Southeast Asia,South Asia
+170,IA52-R05,IA5,India,7259,2006,2006,10,SS[uc] uttaranchalSS,IA,South and Southeast Asia,South Asia
+171,IA52-R06,IA5,India,6982,2006,2006,10,SS[hr] haryanaSS,IA,South and Southeast Asia,South Asia
+172,IA52-R07,IA5,India,7580,2005,2006,10,SS[dl] delhiSS,IA,South and Southeast Asia,South Asia
+173,IA52-R08,IA5,India,11249,2005,2006,10,SS[rj] rajasthanSS,IA,South and Southeast Asia,South Asia
+174,IA52-R09,IA5,India,36500,2005,2006,10,SS[up] uttar pradeshSS,IA,South and Southeast Asia,South Asia
+175,IA52-R10,IA5,India,11523,2006,2006,10,SS[bh] biharSS,IA,South and Southeast Asia,South Asia
+176,IA52-R11,IA5,India,4192,2006,2006,10,SS[sk] sikkimSS,IA,South and Southeast Asia,South Asia
+177,IA52-R12,IA5,India,4391,2006,2006,10,SS[ar] arunachal pradeshSS,IA,South and Southeast Asia,South Asia
+178,IA52-R13,IA5,India,9766,2006,2006,10,SS[na] nagalandSS,IA,South and Southeast Asia,South Asia
+179,IA52-R14,IA5,India,10015,2006,2006,10,SS[mn] manipurSS,IA,South and Southeast Asia,South Asia
+180,IA52-R15,IA5,India,4128,2006,2006,10,SS[mz] mizoramSS,IA,South and Southeast Asia,South Asia
+181,IA52-R16,IA5,India,4169,2006,2006,10,SS[tr] tripuraSS,IA,South and Southeast Asia,South Asia
+182,IA52-R17,IA5,India,5259,2005,2006,10,SS[mg] meghalayaSS,IA,South and Southeast Asia,South Asia
+183,IA52-R18,IA5,India,8807,2005,2006,10,SS[as] assamSS,IA,South and Southeast Asia,South Asia
+184,IA52-R19,IA5,India,14775,2005,2006,10,SS[wb] west bengalSS,IA,South and Southeast Asia,South Asia
+185,IA52-R20,IA5,India,8129,2006,2006,10,SS[jh] jharkhandSS,IA,South and Southeast Asia,South Asia
+186,IA52-R21,IA5,India,10539,2005,2006,10,SS[or] orissaSS,IA,South and Southeast Asia,South Asia
+187,IA52-R22,IA5,India,9970,2005,2006,10,SS[ch] chhattisgarhSS,IA,South and Southeast Asia,South Asia
+188,IA52-R23,IA5,India,17097,2006,2006,10,SS[mp] madhya pradeshSS,IA,South and Southeast Asia,South Asia
+189,IA52-R24,IA5,India,8947,2005,2006,10,SS[gj] gujaratSS,IA,South and Southeast Asia,South Asia
+190,IA52-R27,IA5,India,19460,2005,2006,10,SS[mh] maharashtraSS,IA,South and Southeast Asia,South Asia
+191,IA52-R28,IA5,India,15800,2005,2006,10,SS[ap] andhra pradeshSS,IA,South and Southeast Asia,South Asia
+192,IA52-R29,IA5,India,13238,2006,2006,10,SS[ka] karnatakaSS,IA,South and Southeast Asia,South Asia
+193,IA52-R30,IA5,India,5910,2006,2006,10,SS[go] goaSS,IA,South and Southeast Asia,South Asia
+194,IA52-R32,IA5,India,6622,2006,2006,10,SS[ke] keralaSS,IA,South and Southeast Asia,South Asia
+195,IA52-R33,IA5,India,11808,2006,2006,10,SS[tn] tamil naduSS,IA,South and Southeast Asia,South Asia
+196,IA74,IA6,India,1315617,2015,2016,5,,IA,South and Southeast Asia,South Asia
+197,IA7E-R01,IA7,India,41193,2019,2020,10,SSjammu & kashmirSS,IA,South and Southeast Asia,South Asia
+198,IA7E-R02,IA7,India,19815,2019,2019,10,SShimachal pradeshSS,IA,South and Southeast Asia,South Asia
+199,IA7E-R03,IA7,India,40255,2020,2021,10,SSpunjabSS,IA,South and Southeast Asia,South Asia
+200,IA7E-R04,IA7,India,1410,2021,2021,10,SSchandigarhSS,IA,South and Southeast Asia,South Asia
+201,IA7E-R05,IA7,India,27636,2019,2021,10,SSuttarakhandSS,IA,South and Southeast Asia,South Asia
+202,IA7E-R06,IA7,India,44660,2020,2021,10,SSharyanaSS,IA,South and Southeast Asia,South Asia
+203,IA7E-R07,IA7,India,21235,2019,2021,10,SSnct of delhiSS,IA,South and Southeast Asia,South Asia
+204,IA7E-R08,IA7,India,91860,2019,2021,10,SSrajasthanSS,IA,South and Southeast Asia,South Asia
+205,IA7E-R09,IA7,India,215427,2019,2021,10,SSuttar pradeshSS,IA,South and Southeast Asia,South Asia
+206,IA7E-R10,IA7,India,110540,2019,2019,10,SSbiharSS,IA,South and Southeast Asia,South Asia
+207,IA7E-R11,IA7,India,5368,2019,2019,10,SSsikkimSS,IA,South and Southeast Asia,South Asia
+208,IA7E-R12,IA7,India,40043,2020,2021,10,SSarunachal pradeshSS,IA,South and Southeast Asia,South Asia
+209,IA7E-R13,IA7,India,20959,2019,2019,10,SSnagalandSS,IA,South and Southeast Asia,South Asia
+210,IA7E-R14,IA7,India,17075,2019,2019,10,SSmanipurSS,IA,South and Southeast Asia,South Asia
+211,IA7E-R15,IA7,India,14801,2019,2019,10,SSmizoramSS,IA,South and Southeast Asia,South Asia
+212,IA7E-R16,IA7,India,13197,2019,2019,10,SStripuraSS,IA,South and Southeast Asia,South Asia
+213,IA7E-R17,IA7,India,32537,2019,2019,10,SSmeghalayaSS,IA,South and Southeast Asia,South Asia
+214,IA7E-R18,IA7,India,68280,2019,2019,10,SSassamSS,IA,South and Southeast Asia,South Asia
+215,IA7E-R19,IA7,India,39737,2019,2019,10,SSwest bengalSS,IA,South and Southeast Asia,South Asia
+216,IA7E-R20,IA7,India,60469,2020,2021,10,SSjharkhandSS,IA,South and Southeast Asia,South Asia
+217,IA7E-R21,IA7,India,54530,2020,2021,10,SSodishaSS,IA,South and Southeast Asia,South Asia
+218,IA7E-R22,IA7,India,57988,2020,2021,10,SSchhattisgarhSS,IA,South and Southeast Asia,South Asia
+219,IA7E-R23,IA7,India,107820,2020,2021,10,SSmadhya pradeshSS,IA,South and Southeast Asia,South Asia
+220,IA7E-R24,IA7,India,67607,2019,2019,10,SSgujaratSS,IA,South and Southeast Asia,South Asia
+221,IA7E-R25,IA7,India,5196,2019,2019,10,SSdadra & nagar haveli and daman & diuSS,IA,South and Southeast Asia,South Asia
+222,IA7E-R27,IA7,India,66275,2019,2019,10,SSmaharashtraSS,IA,South and Southeast Asia,South Asia
+223,IA7E-R28,IA7,India,21135,2019,2019,10,SSandhra pradeshSS,IA,South and Southeast Asia,South Asia
+224,IA7E-R29,IA7,India,58286,2019,2019,10,SSkarnatakaSS,IA,South and Southeast Asia,South Asia
+225,IA7E-R30,IA7,India,3106,2019,2019,10,SSgoaSS,IA,South and Southeast Asia,South Asia
+226,IA7E-R31,IA7,India,2064,2019,2020,10,SSlakshadweepSS,IA,South and Southeast Asia,South Asia
+227,IA7E-R32,IA7,India,19033,2019,2019,10,SSkeralaSS,IA,South and Southeast Asia,South Asia
+228,IA7E-R33,IA7,India,46131,2020,2021,10,SStamil naduSS,IA,South and Southeast Asia,South Asia
+229,IA7E-R34,IA7,India,6239,2020,2021,10,SSpuducherrySS,IA,South and Southeast Asia,South Asia
+230,IA7E-R35,IA7,India,3979,2019,2020,10,SSandaman & nicobar islandsSS,IA,South and Southeast Asia,South Asia
+231,IA7E-R36,IA7,India,54528,2019,2019,10,SStelanganaSS,IA,South and Southeast Asia,South Asia
+232,IA7E-R37,IA7,India,3932,2019,2019,10,SSladakhSS,IA,South and Southeast Asia,South Asia
+233,IAAP42,IA3,India,10933,1998,1999,5,,IA,South and Southeast Asia,South Asia
+234,IAAR42,IA3,India,3219,1999,1999,5,,IA,South and Southeast Asia,South Asia
+235,IAAS42,IA3,India,9893,1999,1999,5,,IA,South and Southeast Asia,South Asia
+236,IABH42,IA3,India,23056,1998,1999,5,,IA,South and Southeast Asia,South Asia
+237,IADL42,IA3,India,6837,1999,1999,5,,IA,South and Southeast Asia,South Asia
+238,IAGJ42,IA3,India,10993,1998,1999,5,,IA,South and Southeast Asia,South Asia
+239,IAGO42,IA3,India,2878,1999,1999,5,,IA,South and Southeast Asia,South Asia
+240,IAHP42,IA3,India,8007,1999,1999,5,,IA,South and Southeast Asia,South Asia
+241,IAHR42,IA3,India,8781,1998,1999,5,,IA,South and Southeast Asia,South Asia
+242,IAJM42,IA3,India,9196,1999,1999,5,,IA,South and Southeast Asia,South Asia
+243,IAKA42,IA3,India,12215,1999,1999,5,,IA,South and Southeast Asia,South Asia
+244,IAKE42,IA3,India,6461,1999,1999,5,,IA,South and Southeast Asia,South Asia
+245,IAMG42,IA3,India,3480,1999,1999,5,,IA,South and Southeast Asia,South Asia
+246,IAMH42,IA3,India,14247,1999,1999,5,,IA,South and Southeast Asia,South Asia
+247,IAMN42,IA3,India,4763,1999,1999,5,,IA,South and Southeast Asia,South Asia
+248,IAMP42,IA3,India,23260,1998,1999,5,,IA,South and Southeast Asia,South Asia
+249,IAMZ42,IA3,India,3201,1999,1999,5,,IA,South and Southeast Asia,South Asia
+250,IANA42,IA3,India,2976,1999,1999,5,,IA,South and Southeast Asia,South Asia
+251,IAOR42,IA3,India,12529,1999,1999,5,,IA,South and Southeast Asia,South Asia
+252,IAPJ42,IA3,India,7661,1998,1999,5,,IA,South and Southeast Asia,South Asia
+253,IARJ42,IA3,India,22680,1998,1999,5,,IA,South and Southeast Asia,South Asia
+254,IASK42,IA3,India,3296,1998,1999,5,,IA,South and Southeast Asia,South Asia
+255,IATN42,IA3,India,11095,1999,1999,5,,IA,South and Southeast Asia,South Asia
+256,IATR42,IA3,India,2911,2000,2000,5,,IA,South and Southeast Asia,South Asia
+257,IAUP42,IA3,India,32933,1998,1999,5,,IA,South and Southeast Asia,South Asia
+258,IAWB42,IA3,India,11378,1998,1999,5,,IA,South and Southeast Asia,South Asia
+259,ID01,ID,Indonesia,39719,1987,1987,5,,ID,South and Southeast Asia,Southeast Asia
+260,ID21,ID2,Indonesia,74329,1991,1991,5,,ID,South and Southeast Asia,Southeast Asia
+261,ID31,ID3,Indonesia,90326,1994,1994,5,,ID,South and Southeast Asia,Southeast Asia
+262,ID3A,ID3,Indonesia,86276,1997,1997,5,,ID,South and Southeast Asia,Southeast Asia
+263,ID42,ID4,Indonesia,79791,2002,2003,5,,ID,South and Southeast Asia,Southeast Asia
+264,ID51,ID5,Indonesia,84726,2007,2007,5,,ID,South and Southeast Asia,Southeast Asia
+265,ID63,ID6,Indonesia,83650,2012,2012,5,,ID,South and Southeast Asia,Southeast Asia
+266,ID71,ID7,Indonesia,86265,2017,2017,5,,ID,South and Southeast Asia,Southeast Asia
+267,JO21,JO2,Jordan,32812,1990,1990,5,,JO,North Africa - West Asia - Europe,West Asia
+268,JO31,JO3,Jordan,24243,1997,1997,5,,JO,North Africa - West Asia - Europe,West Asia
+269,JO42,JO4,Jordan,25296,2002,2002,5,,JO,North Africa - West Asia - Europe,West Asia
+270,JO51,JO5,Jordan,43460,2007,2007,5,,JO,North Africa - West Asia - Europe,West Asia
+271,JO61,JO5,Jordan,38199,2009,2009,5,,JO,North Africa - West Asia - Europe,West Asia
+272,JO6C,JO6,Jordan,42275,2012,2012,5,,JO,North Africa - West Asia - Europe,West Asia
+273,JO74,JO7,Jordan,47040,2017,2018,5,,JO,North Africa - West Asia - Europe,West Asia
+274,JO81,JO8,Jordan,42962,2023,2023,5,,JO,North Africa - West Asia - Europe,West Asia
+275,KE03,KE,Kenya,25173,1988,1989,5,,KE,Sub-Saharan Africa,Eastern Africa
+276,KE33,KE2,Kenya,23899,1993,1993,5,,KE,Sub-Saharan Africa,Eastern Africa
+277,KE3A,KE3,Kenya,23351,1998,1998,5,,KE,Sub-Saharan Africa,Eastern Africa
+278,KE42,KE4,Kenya,22074,2003,2003,5,,KE,Sub-Saharan Africa,Eastern Africa
+279,KE52,KE5,Kenya,22534,2008,2009,5,,KE,Sub-Saharan Africa,Eastern Africa
+280,KE72,KE6,Kenya,83591,2014,2014,5,,KE,Sub-Saharan Africa,Eastern Africa
+281,KE8C,KE8,Kenya,77381,2022,2022,5,,KE,Sub-Saharan Africa,Eastern Africa
+282,KH42,KH4,Cambodia,40990,2000,2000,5,,KH,South and Southeast Asia,Southeast Asia
+283,KH51,KH5,Cambodia,40457,2005,2006,5,,KH,South and Southeast Asia,Southeast Asia
+284,KH61,KH5,Cambodia,37511,2010,2011,5,,KH,South and Southeast Asia,Southeast Asia
+285,KH73,KH6,Cambodia,33290,2014,2014,5,,KH,South and Southeast Asia,Southeast Asia
+286,KH82,KH8,Cambodia,34402,2021,2022,5,,KH,South and Southeast Asia,Southeast Asia
+287,KK31,KK3,Kazakhstan,6866,1995,1995,5,,KK,Central Asia,Central Asia
+288,KK42,KK3,Kazakhstan,8106,1999,1999,5,,KK,Central Asia,Central Asia
+289,KM32,KM3,Comoros,7913,1996,1996,5,,KM,Sub-Saharan Africa,Eastern Africa
+290,KM61,KM6,Comoros,11497,2012,2012,5,,KM,Sub-Saharan Africa,Eastern Africa
+291,KY31,KY3,Kyrgyz Republic,8781,1997,1997,5,,KY,Central Asia,Central Asia
+292,KY61,KY6,Kyrgyz Republic,16180,2012,2012,5,,KY,Central Asia,Central Asia
+293,LB01,LB,Liberia,17264,1986,1986,5,,LB,Sub-Saharan Africa,Western Africa
+294,LB51,LB5,Liberia,22123,2006,2007,5,,LB,Sub-Saharan Africa,Western Africa
+295,LB6A,LB6,Liberia,30804,2013,2013,5,,LB,Sub-Saharan Africa,Western Africa
+296,LB7A,LB7,Liberia,24765,2019,2020,5,,LB,Sub-Saharan Africa,Western Africa
+297,LK02,LK,Sri Lanka,17705,1987,1987,5,,LK,South and Southeast Asia,South Asia
+298,LS41,LS4,Lesotho,14708,2004,2005,5,,LS,Sub-Saharan Africa,Southern Africa
+299,LS61,LS5,Lesotho,14429,2009,2010,5,,LS,Sub-Saharan Africa,Southern Africa
+300,LS71,LS6,Lesotho,11710,2014,2014,5,,LS,Sub-Saharan Africa,Southern Africa
+301,LS81,LS8,Lesotho,10445,2023,2024,5,,LS,Sub-Saharan Africa,Southern Africa
+302,MA01,MA,Morocco,25518,1987,1987,5,,MA,North Africa - West Asia - Europe,North Africa
+303,MA21,MA2,Morocco,22657,1992,1992,5,,MA,North Africa - West Asia - Europe,North Africa
+304,MA43,MA4,Morocco,32494,2003,2004,5,,MA,North Africa - West Asia - Europe,North Africa
+305,MB53,MB4,Moldova,9903,2005,2005,5,,MB,North Africa - West Asia - Europe,Eastern Europe
+306,MD21,MD2,Madagascar,18931,1992,1992,5,,MD,Sub-Saharan Africa,Eastern Africa
+307,MD31,MD3,Madagascar,21653,1997,1997,5,,MD,Sub-Saharan Africa,Eastern Africa
+308,MD42,MD4,Madagascar,20799,2003,2004,5,,MD,Sub-Saharan Africa,Eastern Africa
+309,MD51,MD5,Madagascar,48464,2008,2009,5,,MD,Sub-Saharan Africa,Eastern Africa
+310,MD81,MD7,Madagascar,47720,2021,2021,5,,MD,Sub-Saharan Africa,Eastern Africa
+311,ML01,ML,Mali,12252,1987,1987,5,,ML,Sub-Saharan Africa,Western Africa
+312,ML32,ML3,Mali,37921,1995,1996,5,,ML,Sub-Saharan Africa,Western Africa
+313,ML41,ML4,Mali,48407,2001,2001,5,,ML,Sub-Saharan Africa,Western Africa
+314,ML53,ML5,Mali,52140,2006,2006,5,,ML,Sub-Saharan Africa,Western Africa
+315,ML6A,ML6,Mali,33803,2012,2013,5,,ML,Sub-Saharan Africa,Western Africa
+316,ML7A,ML7,Mali,33379,2018,2018,5,,ML,Sub-Saharan Africa,Western Africa
+317,ML8A,ML8,Mali,53413,2023,2024,5,,ML,Sub-Saharan Africa,Western Africa
+318,MM71,MM7,Myanmar,22989,2015,2016,5,,MM,South and Southeast Asia,Southeast Asia
+319,MR71,MR7,Mauritania,39793,2019,2021,5,,MR,Sub-Saharan Africa,Western Africa
+320,MV52,MV5,Maldives,20136,2009,2009,5,,MV,South and Southeast Asia,South Asia
+321,MV71,MV7,Maldives,13922,2016,2017,5,,MV,South and Southeast Asia,South Asia
+322,MW22,MW2,Malawi,16330,1992,1992,5,,MW,Sub-Saharan Africa,Eastern Africa
+323,MW41,MW4,Malawi,40421,2000,2000,5,,MW,Sub-Saharan Africa,Eastern Africa
+324,MW4E,MW4,Malawi,35883,2004,2005,5,,MW,Sub-Saharan Africa,Eastern Africa
+325,MW61,MW5,Malawi,72301,2010,2010,5,,MW,Sub-Saharan Africa,Eastern Africa
+326,MW7A,MW7,Malawi,68074,2015,2016,5,,MW,Sub-Saharan Africa,Eastern Africa
+327,MW81,MW8,Malawi,52765,2024,2024,5,,MW,Sub-Saharan Africa,Eastern Africa
+328,MX01,MX,Mexico,22676,1987,1987,5,,MX,Latin America and Caribbean,Central America
+329,MZ31,MZ3,Mozambique,25752,1997,1997,5,,MZ,Sub-Saharan Africa,Eastern Africa
+330,MZ41,MZ4,Mozambique,37443,2003,2004,5,,MZ,Sub-Saharan Africa,Eastern Africa
+331,MZ62,MZ6,Mozambique,37984,2011,2011,5,,MZ,Sub-Saharan Africa,Eastern Africa
+332,MZ81,MZ8,Mozambique,33900,2022,2023,5,,MZ,Sub-Saharan Africa,Eastern Africa
+333,NC31,NC3,Nicaragua,36820,1997,1998,5,,NC,Latin America and Caribbean,Central America
+334,NC41,NC4,Nicaragua,34157,2001,2001,5,,NC,Latin America and Caribbean,Central America
+335,NG21,NG2,Nigeria,28123,1990,1990,5,,NG,Sub-Saharan Africa,Western Africa
+336,NG4B,NG4,Nigeria,23038,2003,2003,5,,NG,Sub-Saharan Africa,Western Africa
+337,NG53,NG5,Nigeria,104808,2008,2008,5,,NG,Sub-Saharan Africa,Western Africa
+338,NG6A,NG6,Nigeria,119386,2013,2013,5,,NG,Sub-Saharan Africa,Western Africa
+339,NG7B,NG7,Nigeria,127545,2018,2018,5,,NG,Sub-Saharan Africa,Western Africa
+340,NG8B,NG8,Nigeria,104557,2023,2024,5,,NG,Sub-Saharan Africa,Western Africa
+341,NI22,NI2,Niger,23841,1992,1992,5,,NI,Sub-Saharan Africa,Western Africa
+342,NI31,NI3,Niger,28888,1998,1998,5,,NI,Sub-Saharan Africa,Western Africa
+343,NI51,NI5,Niger,34378,2006,2006,5,,NI,Sub-Saharan Africa,Western Africa
+344,NI61,NI6,Niger,44183,2012,2012,5,,NI,Sub-Saharan Africa,Western Africa
+345,NM21,NM2,Namibia,13372,1992,1992,5,,NM,Sub-Saharan Africa,Southern Africa
+346,NM41,NM4,Namibia,14946,2000,2000,5,,NM,Sub-Saharan Africa,Southern Africa
+347,NM51,NM5,Namibia,19522,2006,2007,5,,NM,Sub-Saharan Africa,Southern Africa
+348,NM61,NM6,Namibia,18090,2013,2013,5,,NM,Sub-Saharan Africa,Southern Africa
+349,NP31,NP3,Nepal,29156,1952,1953,5,,NP,South and Southeast Asia,South Asia
+350,NP41,NP4,Nepal,28955,2057,2058,5,,NP,South and Southeast Asia,South Asia
+351,NP51,NP5,Nepal,26394,2062,2063,5,,NP,South and Southeast Asia,South Asia
+352,NP61,NP6,Nepal,26615,2067,2068,5,,NP,South and Southeast Asia,South Asia
+353,NP7H,NP7,Nepal,26028,2073,2073,5,,NP,South and Southeast Asia,South Asia
+354,NP82,NP8,Nepal,27613,2078,2079,5,,NP,South and Southeast Asia,South Asia
+355,OS01,OS,Nigeria (Ondo State),6091,1986,1987,5,,OS,Sub-Saharan Africa,Western Africa
+356,PE01,PE,Peru,13291,1986,1986,5,,PE,Latin America and Caribbean,South America
+357,PE21,PE2,Peru,38783,1991,1992,5,,PE,Latin America and Caribbean,South America
+358,PE31,PE3,Peru,72390,1996,1996,5,,PE,Latin America and Caribbean,South America
+359,PE41,PE4,Peru,65453,2000,2000,5,,PE,Latin America and Caribbean,South America
+360,PE51,PE5,Peru,89220,2003,2008,5,,PE,Latin America and Caribbean,South America
+361,PE5I,PE6,Peru,50084,2009,2009,5,,PE,Latin America and Caribbean,South America
+362,PE61,PE6,Peru,46780,2010,2010,5,,PE,Latin America and Caribbean,South America
+363,PE6A,PE6,Peru,46194,2011,2011,5,,PE,Latin America and Caribbean,South America
+364,PE6I,PE6,Peru,47261,2012,2012,5,,PE,Latin America and Caribbean,South America
+365,PG71,PG7,Papua New Guinea,34561,2016,2018,5,,PG,Oceania,Pacific Islands
+366,PH31,PH2,Philippines,35863,1993,1993,5,,PH,South and Southeast Asia,Southeast Asia
+367,PH3B,PH3,Philippines,32626,1998,1998,5,,PH,South and Southeast Asia,Southeast Asia
+368,PH41,PH4,Philippines,30443,2003,2003,5,,PH,South and Southeast Asia,Southeast Asia
+369,PH52,PH5,Philippines,28518,2008,2008,5,,PH,South and Southeast Asia,Southeast Asia
+370,PH61,PH6,Philippines,31680,2013,2013,5,,PH,South and Southeast Asia,Southeast Asia
+371,PH71,PH7,Philippines,47244,2017,2017,5,,PH,South and Southeast Asia,Southeast Asia
+372,PH82,PH8,Philippines,45633,2022,2022,5,,PH,South and Southeast Asia,Southeast Asia
+373,PK21,PK2,Pakistan,27369,1990,1991,5,,PK,South and Southeast Asia,South Asia
+374,PK53,PK5,Pakistan,39049,2006,2007,5,,PK,South and Southeast Asia,South Asia
+375,PK61,PK6,Pakistan,50238,2012,2013,5,,PK,South and Southeast Asia,South Asia
+376,PK71,PK7,Pakistan,50495,2017,2018,5,,PK,South and Southeast Asia,South Asia
+377,PY21,PY2,Paraguay,15346,1990,1990,5,,PY,Latin America and Caribbean,South America
+378,RW21,RW2,Rwanda,19440,1992,1992,5,,RW,Sub-Saharan Africa,Eastern Africa
+379,RW41,RW4,Rwanda,27602,2000,2000,5,,RW,Sub-Saharan Africa,Eastern Africa
+380,RW53,RW4,Rwanda,30072,2005,2005,5,,RW,Sub-Saharan Africa,Eastern Africa
+381,RW5A,RW5,Rwanda,18421,2007,2008,5,,RW,Sub-Saharan Africa,Eastern Africa
+382,RW61,RW6,Rwanda,32639,2010,2011,5,,RW,Sub-Saharan Africa,Eastern Africa
+383,RW70,RW6,Rwanda,30058,2014,2015,5,,RW,Sub-Saharan Africa,Eastern Africa
+384,RW81,RW7,Rwanda,30820,2019,2020,5,,RW,Sub-Saharan Africa,Eastern Africa
+385,SD02,SD,Sudan,25805,1989,1990,5,,SD,Sub-Saharan Africa,Eastern Africa
+386,SL51,SL5,Sierra Leone,21136,2008,2008,5,,SL,Sub-Saharan Africa,Western Africa
+387,SL61,SL6,Sierra Leone,47392,2013,2013,5,,SL,Sub-Saharan Africa,Western Africa
+388,SL7A,SL7,Sierra Leone,40543,2019,2019,5,,SL,Sub-Saharan Africa,Western Africa
+389,SN02,SN,Senegal,14389,1986,1986,5,,SN,Sub-Saharan Africa,Western Africa
+390,SN21,SN2,Senegal,20815,1992,1993,5,,SN,Sub-Saharan Africa,Western Africa
+391,SN32,SN2,Senegal,27448,1997,1997,5,,SN,Sub-Saharan Africa,Western Africa
+392,SN4A,SN4,Senegal,39895,2005,2005,5,,SN,Sub-Saharan Africa,Western Africa
+393,SN61,SN6,Senegal,42510,2010,2011,5,,SN,Sub-Saharan Africa,Western Africa
+394,SN6D,SN6,Senegal,22563,2012,2013,5,,SN,Sub-Saharan Africa,Western Africa
+395,SN6R,SN6,Senegal,44928,2012,2014,5,,SN,Sub-Saharan Africa,Western Africa
+396,SN71,SN6,Senegal,22365,2014,2014,5,,SN,Sub-Saharan Africa,Western Africa
+397,SN7A,SN6,Senegal,23250,2015,2015,5,,SN,Sub-Saharan Africa,Western Africa
+398,SN7I,SN6,Senegal,22740,2016,2016,5,,SN,Sub-Saharan Africa,Western Africa
+399,SN7Z,SN7,Senegal,42944,2017,2017,5,,SN,Sub-Saharan Africa,Western Africa
+400,SN81,SN7,Senegal,23913,2018,2018,5,,SN,Sub-Saharan Africa,Western Africa
+401,SN8B,SN7,Senegal,21562,2019,2019,5,,SN,Sub-Saharan Africa,Western Africa
+402,SN8S,SN8,Senegal,39490,2023,2023,5,,SN,Sub-Saharan Africa,Western Africa
+403,SNG0,SN6,Senegal,45990,2015,2016,5,,SN,Sub-Saharan Africa,Western Africa
+404,ST51,ST5,Sao Tome and Principe,7620,2008,2009,5,,ST,Sub-Saharan Africa,Middle Africa
+405,SZ51,SZ5,Eswatini,11410,2006,2007,5,,SZ,Sub-Saharan Africa,Southern Africa
+406,TD31,TD3,Chad,25739,1996,1997,5,,TD,Sub-Saharan Africa,Middle Africa
+407,TD41,TD4,Chad,21448,2004,2004,5,,TD,Sub-Saharan Africa,Middle Africa
+408,TD71,TD6,Chad,68989,2014,2015,5,,TD,Sub-Saharan Africa,Middle Africa
+409,TG01,TG,Togo,10782,1988,1988,5,,TG,Sub-Saharan Africa,Western Africa
+410,TG31,TG3,Togo,26269,1998,1998,5,,TG,Sub-Saharan Africa,Western Africa
+411,TG61,TG6,Togo,26264,2013,2014,5,,TG,Sub-Saharan Africa,Western Africa
+412,TH01,TH,Thailand,17803,1987,1987,5,,TH,South and Southeast Asia,Southeast Asia
+413,TJ61,TJ6,Tajikistan,19938,2012,2012,5,,TJ,Central Asia,Central Asia
+414,TJ72,TJ7,Tajikistan,21985,2017,2017,5,,TJ,Central Asia,Central Asia
+415,TJ81,TJ8,Tajikistan,20356,2023,2023,5,,TJ,Central Asia,Central Asia
+416,TL61,TL5,Timor-Leste,35998,2009,2010,5,,TL,South and Southeast Asia,Southeast Asia
+417,TL71,TL7,Timor-Leste,28682,2016,2016,5,,TL,South and Southeast Asia,Southeast Asia
+418,TN02,TN,Tunisia,16463,1988,1988,5,,TN,North Africa - West Asia - Europe,North Africa
+419,TR31,TR2,Turkey,19762,1993,1993,5,,TR,North Africa - West Asia - Europe,West Asia
+420,TR41,TR3,Turkey,17791,1998,1998,5,,TR,North Africa - West Asia - Europe,West Asia
+421,TR4A,TR4,Turkey,22443,2003,2004,5,,TR,North Africa - West Asia - Europe,West Asia
+422,TR51,TR5,Turkey,19678,2008,2008,5,,TR,North Africa - West Asia - Europe,West Asia
+423,TR62,TR6,Turkey,17871,2013,2013,5,,TR,North Africa - West Asia - Europe,West Asia
+424,TR71,TR7,Turkey,13367,2018,2019,5,,TR,North Africa - West Asia - Europe,West Asia
+425,TT01,TT,Trinidad and Tobago,7837,1987,1987,5,,TT,Latin America and Caribbean,Caribbean
+426,TZ21,TZ2,Tanzania,29143,1991,1992,5,,TZ,Sub-Saharan Africa,Eastern Africa
+427,TZ3A,TZ3,Tanzania,24890,1996,1996,5,,TZ,Sub-Saharan Africa,Eastern Africa
+428,TZ41,TZ3,Tanzania,11952,1999,1999,5,,TZ,Sub-Saharan Africa,Eastern Africa
+429,TZ4I,TZ4,Tanzania,30557,2004,2005,5,,TZ,Sub-Saharan Africa,Eastern Africa
+430,TZ63,TZ5,Tanzania,29777,2009,2010,5,,TZ,Sub-Saharan Africa,Eastern Africa
+431,TZ7B,TZ7,Tanzania,37169,2015,2016,5,,TZ,Sub-Saharan Africa,Eastern Africa
+432,TZ82,TZ8,Tanzania,40394,2022,2022,5,,TZ,Sub-Saharan Africa,Eastern Africa
+433,UA51,UA5,Ukraine,8007,2007,2007,5,,UA,North Africa - West Asia - Europe,Eastern Europe
+434,UG01,UG,Uganda,16074,1988,1989,5,,UG,Sub-Saharan Africa,Eastern Africa
+435,UG33,UG3,Uganda,22752,1995,1995,5,,UG,Sub-Saharan Africa,Eastern Africa
+436,UG41,UG4,Uganda,23410,2000,2001,5,,UG,Sub-Saharan Africa,Eastern Africa
+437,UG52,UG5,Uganda,30090,2006,2006,5,,UG,Sub-Saharan Africa,Eastern Africa
+438,UG61,UG6,Uganda,28609,2011,2011,5,,UG,Sub-Saharan Africa,Eastern Africa
+439,UG7B,UG7,Uganda,57906,2016,2016,5,,UG,Sub-Saharan Africa,Eastern Africa
+440,UZ31,UZ3,Uzbekistan,9650,1996,1996,5,,UZ,Central Asia,Central Asia
+441,VN31,VNT,Vietnam,15517,1997,1997,5,,VN,South and Southeast Asia,Southeast Asia
+442,VN41,VNT,Vietnam,14383,2002,2002,5,,VN,South and Southeast Asia,Southeast Asia
+443,YE21,YE2,Yemen,29803,1991,1992,5,,YE,North Africa - West Asia - Europe,West Asia
+444,YE61,YE6,Yemen,64602,2013,2013,5,,YE,North Africa - West Asia - Europe,West Asia
+445,ZA31,ZA3,South Africa,22934,1998,1998,5,,ZA,Sub-Saharan Africa,Southern Africa
+446,ZA71,ZA7,South Africa,14144,2016,2016,5,,ZA,Sub-Saharan Africa,Southern Africa
+447,ZM21,ZM2,Zambia,22122,1992,1992,5,,ZM,Sub-Saharan Africa,Eastern Africa
+448,ZM31,ZM3,Zambia,24799,1996,1997,5,,ZM,Sub-Saharan Africa,Eastern Africa
+449,ZM42,ZM4,Zambia,23805,2001,2002,5,,ZM,Sub-Saharan Africa,Eastern Africa
+450,ZM51,ZM5,Zambia,21366,2007,2007,5,,ZM,Sub-Saharan Africa,Eastern Africa
+451,ZM61,ZM6,Zambia,49207,2013,2014,5,,ZM,Sub-Saharan Africa,Eastern Africa
+452,ZM71,ZM7,Zambia,38446,2018,2019,5,,ZM,Sub-Saharan Africa,Eastern Africa
+453,ZM81,ZM8,Zambia,35610,2024,2024,5,,ZM,Sub-Saharan Africa,Eastern Africa
+454,ZW01,ZW,Zimbabwe,12405,1988,1989,5,,ZW,Sub-Saharan Africa,Eastern Africa
+455,ZW31,ZW3,Zimbabwe,16777,1994,1994,5,,ZW,Sub-Saharan Africa,Eastern Africa
+456,ZW42,ZW4,Zimbabwe,14184,1999,1999,5,,ZW,Sub-Saharan Africa,Eastern Africa
+457,ZW52,ZW5,Zimbabwe,19489,2005,2006,5,,ZW,Sub-Saharan Africa,Eastern Africa
+458,ZW62,ZW6,Zimbabwe,19279,2010,2011,5,,ZW,Sub-Saharan Africa,Eastern Africa
+459,ZW72,ZW7,Zimbabwe,20791,2015,2015,5,,ZW,Sub-Saharan Africa,Eastern Africa
