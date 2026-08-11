@@ -147,7 +147,7 @@ if R > 0
     end
     iNFo                        = iNFo(1:end - numel(worked_examples),:);
     R                           = min(iNFo.R);
-    %save(char(pATh + "ReSuLTs/BoOTStrAp_DHS.mat"));
+    save(char(pATh + "ReSuLTs/BoOTStrAp_DHS.mat"));
 else
     load(char(pATh + "ReSuLTs/BoOTStrAp_DHS.mat"),'iNFo','LT','LTwe','worked_examples','pATh','R','structure','xE');
 end
@@ -229,7 +229,7 @@ for j = 1:numel(LT)
     q                           = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1},1).*nMx))];
     Qdhs_R{j}{1}                = q(:,1:tables);
     Qdhs_R{j}{2}                = q(:,tables + 1:end);
-   
+    
     B                           = Coef_BaYeS(Qdhs_S{j}{2},x,ReG,sum(sEL),Uf,6);
     betaB{j}                    = B(:,1:order);
     BolsB{j}                    = {Coef_fast(Qdhs_S{j}{2},x,ReG),ReG};
@@ -341,29 +341,29 @@ W                       = diag(diff(x{1},1)/x{1}(end));
 N                       = numel(x{1}) - 1;
 warmup                  = 5000;
 iterations              = 100000;
-for j = 1:numel(worked_examples(1))
-    s               = find(ismember(iNFo.fILe,worked_examples(j)));
-    q               = Qdhs_R{sex}{1}(:,s);
+for j = 1:numel(worked_examples)
+    s                = find(ismember(iNFo.fILe,worked_examples(j)));
+    q                = Qdhs_R{sex}{1}(:,s);
 
-    coefficients    = BetaB{sex}(:,1:3:end);
-    V               = coefficients(:,end);
-    X               = coefficients(:,1:end - 1)*(log(q(end,:)).^(0:Z))';
-    e               = log(q(2:end)) - X;
+    coefficients     = BetaB{sex}(:,1:3:end);
+    V                = coefficients(:,end);
+    X                = coefficients(:,1:end - 1)*(log(q(end,:)).^(0:Z))';
+    e                = log(q(2:end)) - X;
     
-    VV              = V'*W*N*V;
-    Ve              = V'*W*N*e;
-    ee              = e'*W*N*e;
-    theta           = VV\Ve;
-    example1{j}.OLS = theta;
-    example1{j}.VAR = ((V'*W*V)\(e'*W*e) - theta^2)*N/(N - 1);
-    example1{j}.sd  = sqrt(example1{j}.VAR);
-    example1{j}.se  = sqrt(example1{j}.VAR)/sqrt(N);
-    example1{j}.sE  = sqrt((VV\ee - theta^2)/(N - 1));
+    VV               = V'*W*V;
+    Ve               = V'*W*e;
+    ee               = e'*W*e;
+    theta            = VV\Ve;
+    ex1{j}.OLS       = theta;
+    ex1{j}.VAR       = ((V'*W*V)\(e'*W*e) - theta^2)*N/(N - 1);
+    ex1{j}.sd        = sqrt(ex1{j}.VAR);
+    ex1{j}.se        = sqrt(ex1{j}.VAR)/sqrt(N);
+    ex1{j}.sE        = sqrt((VV\ee - theta^2)/(N - 1));
 
-    priork          = {0;10^-4};
-    priorPhi        = {10^-2,10^-2};
-    k               = 0;
-    Phi             = 10^-2;
+    priork           = {0;10^-4};
+    priorPhi         = {10^-2,10^-2};
+    k                = 0;
+    Phi              = 10^-2;
     for r = 1:iterations + warmup
         EE       = ee - 2*Ve*k + k*VV*k;
         Phi      = gamrnd(priorPhi{1} + N/2,1/(priorPhi{2} + 1/2*EE));
@@ -373,21 +373,20 @@ for j = 1:numel(worked_examples(1))
         k        = normrnd(Mu,sqrt(s2));
         
         if r > warmup
-            example1{j}.k(r - warmup,:)   = k;
-            example1{j}.Phi(r - warmup,:) = Phi;
-            example1{j}.MSE(r - warmup,:) = k.^2 + 1./Phi;
+            ex1{j}.k(r - warmup,:)    = k;
+            ex1{j}.Phi(r - warmup,:)  = Phi;
+            ex1{j}.MSE(r - warmup,:)  = k.^2 + 1./Phi;
         end
         clear EE s2 Mu
     end
-    k               = example1{1}.k';
-    q               = [zeros(1,iterations);exp(X + V*k)];
-    example1{j}.qBa = prctile(q,[50 2.5 97.5],2);
+    k                = ex1{1}.k';
+    q                = [zeros(1,iterations);exp(X + V*k)];
+    ex1{j}.qBa       = prctile(q,[50 2.5 97.5],2);
 
-    k               = example1{j}.OLS + 1.96*example1{j}.se*[0 -1 1];
-    example1{j}.qL2 = [zeros(1,3);exp(X + V*k)];
-    k               = example1{j}.OLS + 1.96*example1{j}.sd*[0 -1 1];
-    example1{j}.qL1 = [zeros(1,3);exp(X + V*k)];
-
+    k                = ex1{j}.OLS + 1.96*ex1{j}.se*[0 -1 1];
+    ex1{j}.qLse      = [zeros(1,3);exp(X + V*k)];
+    k                = ex1{j}.OLS + 1.96*ex1{j}.sd*[0 -1 1];
+    ex1{j}.qLsd      = [zeros(1,3);exp(X + V*k)];
     clear s q V e VV Ve ee theta priork priorPhi k Phi coefficients
 end
 
@@ -397,30 +396,30 @@ iterations              = 5000;
 samples                 = 1000;
 sEL                     = unidrnd(size(betaB{3}{1},2),samples,1);
 W                       = diff(x{1},1)/x{1}(end);
-for j = 1:numel(worked_examples(1))
-    s               = find(ismember(iNFo.fILe,worked_examples(j)));
-    q               = Qdhs_R{3}{1}(:,s);
+for j = 1:numel(worked_examples)
+    s                = find(ismember(iNFo.fILe,worked_examples(j)));
+    q                = Qdhs_R{3}{1}(:,s);
 
     for i = 1:numel(sEL)
         X(:,i)   = [betaB{sex}{1}(:,sEL(i)) betaB{sex}{2}(:,sEL(i)) betaB{sex}{3}(:,sEL(i))]*(log(q(end)).^(0:Z))';
     end
-    e               = log(q(2:end)) - X;
-    V               = betaB{sex}{4}(:,sEL);
+    e                = log(q(2:end)) - X;
+    V                = betaB{sex}{4}(:,sEL);
 
-    VV              = sum(V.*W.*N.*V)';
-    Ve              = sum(V.*W.*N.*e)';
-    ee              = sum(e.*W.*N.*e)';
-    theta           = Ve./VV;
-    example2{j}.OLS = theta;
-    example2{j}.VAR = (sum(e.*W.*e)'./sum(V.*W.*V)' - theta.^2)*N/(N - 1);
-    example2{j}.sd  = sqrt(example2{j}.VAR);
-    example2{j}.se  = sqrt(example2{j}.VAR)/sqrt(N);
-    example2{j}.sE  = sqrt((ee./VV - theta.^2)/(N - 1));
+    VV               = sum(V.*W.*V)';
+    Ve               = sum(V.*W.*e)';
+    ee               = sum(e.*W.*e)';
+    theta            = Ve./VV;
+    ex2{j}.OLS       = theta;
+    ex2{j}.VAR       = (sum(e.*W.*e)'./sum(V.*W.*V)' - theta.^2)*N/(N - 1);
+    ex2{j}.sd        = sqrt(ex2{j}.VAR);
+    ex2{j}.se        = sqrt(ex2{j}.VAR)/sqrt(N);
+    ex2{j}.sE        = sqrt((ee./VV - theta.^2)/(N - 1));
 
-    priork          = {zeros(samples,1);ones(samples,1)*10^-4};
-    priorPhi        = {ones(samples,1)*10^-2,ones(samples,1)*10^-2};
-    k               = zeros(samples,1);
-    Phi             = ones(samples,1)*10^-2;    
+    priork           = {zeros(samples,1);ones(samples,1)*10^-4};
+    priorPhi         = {ones(samples,1)*10^-2,ones(samples,1)*10^-2};
+    k                = zeros(samples,1);
+    Phi              = ones(samples,1)*10^-2;    
     for r = 1:iterations + warmup
         EE       = ee - 2*Ve.*k + k.*VV.*k;
         Phi      = gamrnd(priorPhi{1} + N/2,1./(priorPhi{2} + 1/2*EE));
@@ -430,63 +429,63 @@ for j = 1:numel(worked_examples(1))
         k        = normrnd(Mu,sqrt(s2));
         
         if r > warmup
-            example2{j}.k(:,r - warmup)   = k;
-            example2{j}.Phi(:,r - warmup) = Phi;
-            example2{j}.MSE(:,r - warmup) = k.^2 + 1./Phi;
+            ex2{j}.k(:,r - warmup)    = k;
+            ex2{j}.Phi(:,r - warmup)  = Phi;
+            ex2{j}.MSE(:,r - warmup)  = k.^2 + 1./Phi;
         end
         clear EE s2 Mu
     end
 
-    k               = example2{j}.k';
-    q               = [];
+    k                = ex2{j}.k';
+    q                = {};
     for i = 1:iterations
-        q = [q,[zeros(1,samples);exp(X + V.*k(i,:))]];
+        q{i}     = [zeros(1,samples);exp(X + V.*k(i,:))];
     end
-    example2{j}.qBa = prctile(q,[50 2.5 97.5],2);
+    ex2{j}.qBa       = prctile(cell2mat(q),[50 2.5 97.5],2);
+    q                = [zeros(1,samples);exp(X + V.*theta')];
+    ex2{j}.qLC       = prctile(q,[50 2.5 97.5],2);
     clear s q X V e VV Ve ee theta priork priorPhi k Phi
 end
 
 
 
-
 for j = 1:numel(worked_examples)
-    nMx             = LTwe{3}{j,1};
-    q               = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx))];
-    ndx             = diff(q,1);
-    nLx             = min(ndx./nMx,diff(xE{1},1).*(1 - q(1:end - 1,:)));
-    nMx             = (I'*ndx)./(I'*nLx);
-    q               = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1},1).*nMx))];
-    WE{j}           = q(:,2:end);
-    T               = table(q','VariableNames',{'age_index'});
+    nMx              = LTwe{3}{j,1};
+    q                = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(xE{1},1).*nMx))];
+    ndx              = diff(q,1);
+    nLx              = min(ndx./nMx,diff(xE{1},1).*(1 - q(1:end - 1,:)));
+    nMx              = (I'*ndx)./(I'*nLx);
+    q                = 1 - [ones(1,size(nMx,2));exp(-cumsum(diff(x{1},1).*nMx))];
+    WE{j}            = q(:,2:end);
+    T                = table(q','VariableNames',{'age_index'});
     writetable(T, char(pATh + "ReSuLTs/BoOTStrAp_WE_" + worked_examples(j) + ".csv"));
     clear q nMx T
 end
 
 warmup                  = 1000;
 iterations              = 5000;
-W                       = diff(x{1},1)/x{1}(end);
-for j = 1:numel(worked_examples(1))
-    q               = WE{j};
-    coefficients    = BetaB{sex}(:,1:3:end);
-    V               = coefficients(:,end);
-    X               = coefficients(:,1:end - 1)*(log(q(end,:)').^(0:Z))';
-    e               = log(q(2:end,:)) - X;
+coefficients            = BetaB{sex}(:,1:3:end);
+for j = 1:numel(worked_examples)
+    q                = WE{j};
+    V                = coefficients(:,end);
+    X                = coefficients(:,1:end - 1)*(log(q(end,:)').^(0:Z))';
+    e                = log(q(2:end,:)) - X;
 
-    VV              = sum(V.*W.*N.*V)';
-    Ve              = sum(V.*W.*N.*e)';
-    ee              = sum(e.*W.*N.*e)';
-    theta           = Ve./VV;
-    example3{j}.OLS = theta;
-    example3{j}.VAR = (sum(e.*W.*e)'./sum(V.*W.*V)' - theta.^2)*N/(N - 1);
-    example3{j}.sd  = sqrt(example3{j}.VAR);
-    example3{j}.se  = sqrt(example3{j}.VAR)/sqrt(N);
-    example3{j}.sE  = sqrt((ee./VV - theta.^2)/(N - 1));
+    VV               = sum(V.*W.*V)';
+    Ve               = sum(V.*W.*e)';
+    ee               = sum(e.*W.*e)';
+    theta            = Ve./VV;
+    ex3{j}.OLS       = theta;
+    ex3{j}.VAR       = (sum(e.*W.*e)'./sum(V.*W.*V)' - theta.^2)*N/(N - 1);
+    ex3{j}.sd        = sqrt(ex3{j}.VAR);
+    ex3{j}.se        = sqrt(ex3{j}.VAR)/sqrt(N);
+    ex3{j}.sE        = sqrt((ee./VV - theta.^2)/(N - 1));
     
-    samples         = numel(theta);
-    priork          = {zeros(samples,1);ones(samples,1)*10^-4};
-    priorPhi        = {ones(samples,1)*10^-2,ones(samples,1)*10^-2};
-    k               = zeros(samples,1);
-    Phi             = ones(samples,1)*10^-2;    
+    samples          = numel(theta);
+    priork           = {zeros(samples,1);ones(samples,1)*10^-4};
+    priorPhi         = {ones(samples,1)*10^-2,ones(samples,1)*10^-2};
+    k                = zeros(samples,1);
+    Phi              = ones(samples,1)*10^-2;    
     for r = 1:iterations + warmup
         EE       = ee - 2*Ve.*k + k.*VV.*k;
         Phi      = gamrnd(priorPhi{1} + N/2,1./(priorPhi{2} + 1/2*EE));
@@ -496,81 +495,87 @@ for j = 1:numel(worked_examples(1))
         k        = normrnd(Mu,sqrt(s2));
         
         if r > warmup
-            example3{j}.k(:,r - warmup)   = k;
-            example3{j}.Phi(:,r - warmup) = Phi;
-            example3{j}.MSE(:,r - warmup) = k.^2 + 1./Phi;
+            ex3{j}.k(:,r - warmup)    = k;
+            ex3{j}.Phi(:,r - warmup)  = Phi;
+            ex3{j}.MSE(:,r - warmup)  = k.^2 + 1./Phi;
         end
         clear EE s2 Mu
     end
 
-    k               = example3{j}.k';
-    q               = [];
+    k                = ex3{j}.k';
+    q                = {i};
     for i = 1:iterations
-        q = [q,[zeros(1,samples);exp(X + V.*k(i,:))]];
+        q{i}     = [zeros(1,samples);exp(X + V.*k(i,:))];
     end
-    example3{j}.qBa = prctile(q,[50 2.5 97.5],2);
+    ex3{j}.qBa       = prctile(cell2mat(q),[50 2.5 97.5],2);
+    q                = [zeros(1,samples);exp(X + V.*theta')];
+    ex3{j}.qLS       = prctile(q,[50 2.5 97.5],2);
     clear s q X V e VV Ve ee theta priork priorPhi k Phi samples
 end
 
 
+options                     = detectImportOptions(char(pATh + "ReSuLTs/MW7A_turnbull.csv"));
+turnbull                    = readtable(char(pATh + "ReSuLTs/MW7A_turnbull.csv"),options);
+turnbull                    = {reshape(turnbull.qx,23,[])};
+for j = 1:numel(turnbull)
+    q                = turnbull{j};
+    V                = coefficients(:,end);
+    X                = coefficients(:,1:end - 1)*(log(q(end,:)').^(0:Z))';
+    e                = log(q(2:end,:)) - X;
 
-
-
-
-
-
-
-
-
-
-
-
-
-options                     = detectImportOptions(char(pATh + "ReSuLTs/turnbull.csv"));
-turnbull                    = readtable(char(pATh + "ReSuLTs/turnbull.csv"),options)
-turnbull                    = table2array(turnbull(:,3:end));
-rng(0);
-warmup                      = 500;
-iterations                  = 5000;
-W                           = diff(x{1},1)/x{1}(end);
-CO                          = {betaA{3} betaS{1}{3}};
-
-for i = 1:size(turnbull,2)
-    q        = turnbull(:,i);
-    match    = Set(q,x,{F,G});
-    xo       = log(match{2}).^(0:ReG.Z);
-    for j = 1:numel(CO)
-        B        = CO{j};
-        Y        = log(match{1}');
-        for h = 1:(ReG.Z + 1)
-            Y = Y - [prctile(B{h}',50)' B{h}]*xo(h);
-        end
-        X        = [prctile(B{h + 1}',50)' B{h + 1}];
-        YY       = sum(Y.*W.*Y,1)';
-        XX       = sum(X.*W.*X,1)';
-        XY       = sum(X.*W.*Y,1)';
-        R        = numel(YY);
+    VV               = sum(V.*W.*V)';
+    Ve               = sum(V.*W.*e)';
+    ee               = sum(e.*W.*e)';
+    theta            = Ve./VV;
+    ex3T{j}.OLS      = theta;
+    ex3T{j}.VAR      = (sum(e.*W.*e)'./sum(V.*W.*V)' - theta.^2)*N/(N - 1);
+    ex3T{j}.sd       = sqrt(ex3{j}.VAR);
+    ex3T{j}.se       = sqrt(ex3{j}.VAR)/sqrt(N);
+    ex3T{j}.sE       = sqrt((ee./VV - theta.^2)/(N - 1));
+    
+    samples          = numel(theta);
+    priork           = {zeros(samples,1);ones(samples,1)*10^-4};
+    priorPhi         = {ones(samples,1)*10^-2,ones(samples,1)*10^-2};
+    k                = zeros(samples,1);
+    Phi              = ones(samples,1)*10^-2;    
+    for r = 1:iterations + warmup
+        EE       = ee - 2*Ve.*k + k.*VV.*k;
+        Phi      = gamrnd(priorPhi{1} + N/2,1./(priorPhi{2} + 1/2*EE));
         
-        Bi       = zeros(R,1);
-        Phi      = ones(R,1)*10^-2;
-        priorBi  = {XY./XX;ones(R,1)*10^-4};
-        priorPhi = {ones(R,1)*10^-2,ones(R,1)*10^-2};
+        s2       = 1./(Phi.*VV + priork{2});
+        Mu       = s2.*(Phi.*VV.*theta + priork{2}.*priork{1});
+        k        = normrnd(Mu,sqrt(s2));   %%%
         
-        for r = 1:iterations + warmup
-            EE   = YY - Bi.*XY - XY.*Bi + Bi.*XX.*Bi;
-            V    = 1./(Phi.*XX + priorBi{2});
-            M    = V.*(Phi.*XY + priorBi{2}.*priorBi{1});
-            Bi   = normrnd(M,sqrt(V));
-            Phi  = gamrnd(priorPhi{1} + numel(W)/2,1./(priorPhi{2} + 1/2*EE));
-            if r > warmup
-                Kopt{i}{j}(:,r - warmup) = Bi;
-            end
+        if r > warmup
+            ex3T{j}.k(:,r - warmup)   = k;
+            ex3T{j}.Phi(:,r - warmup) = Phi;
+            ex3T{j}.MSE(:,r - warmup) = k.^2 + 1./Phi;
         end
-
-        fITt{j}(i,:)     = prctile(Kopt{i}{j}(1,:)',[50 0.5 2.5 5 95 97.5 99.5]);
-        fITtcOEF{j}(i,:) = prctile(reshape(Kopt{i}{j}(2:end,:),[],1),[50 0.5 2.5 5 95 97.5 99.5]);
+        clear EE s2 Mu
     end
+    
+    k                = ex3T{j}.k';
+    q                = {i};
+    for i = 1:iterations
+        q{i}     = [zeros(1,samples);exp(X + V.*k(i,:))];
+    end
+    ex3T{j}.qBa      = prctile(cell2mat(q),[50 2.5 97.5],2);
+    q                = [zeros(1,samples);exp(X + V.*theta')];
+    ex3T{j}.qLS      = prctile(q,[50 2.5 97.5],2);
+    clear s q X V e VV Ve ee theta priork priorPhi k Phi samples
 end
 
 
-samples = 
+for j = 1:numel(worked_examples)
+    T           = table(x{2},x{1},ex1{j}.qBa,ex1{j}.qLse,ex1{j}.qLsd,ex2{j}.qBa,ex2{j}.qLC,ex3{j}.qBa,ex3{j}.qLS,'VariableNames',{'age','x','Bayes Ex1: Fitting k','OLS(se)','OLS(sd)','Bayes Ex2: Fitting k + Coef.','OLS Coef. only','Bayes Ex3: Fitting k + BS survey','OLS BS survey only'});
+    writetable(T, char(pATh + "ReSuLTs/Uncertainty_" + worked_examples(j) + ".csv"));
+    SD(:,j)     = [std(ex1{j}.k);ex1{j}.se;ex1{j}.sd;std(ex2{j}.k(:));std(ex2{j}.OLS);std(ex3{j}.k(:));std(ex3{j}.OLS)];
+end
+
+T           = table(x{2},x{1},ex3T{1}.qBa,ex3T{1}.qLS,'VariableNames',{'age','x','Bayes Ex3: Fitting k + BS survey (Turnbull)','OLS BS survey only (Turnbull)'});
+writetable(T, char(pATh + "ReSuLTs/Uncertainty_MW7A_Turnbull.csv"));
+SDt         = [NaN(2,1) [std(ex3T{1}.k(:));std(ex3T{1}.OLS)]];
+SD          = [SD;SDt];
+examples    = {'Bayes Ex1: Fitting k','OLS(se)','OLS(sd)','Bayes Ex2: Fitting k + Coef.','OLS Coef. only','Bayes Ex3: Fitting k + BS survey','OLS BS survey only','Bayes Ex3: Fitting k + BS survey (Turnbull)','OLS BS survey only (Turnbull)'};
+T           = table(examples',SD(:,1),SD(:,2),'VariableNames',{'example',char(worked_examples(1)),char(worked_examples(2))});
+writetable(T, char(pATh + "ReSuLTs/Uncertainty_sd_of_k.csv"));

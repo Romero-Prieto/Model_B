@@ -1,4 +1,4 @@
-function beta = Coef_BaYeS(q,x,ReG,N,Uf)
+function beta = Coef_BaYeS(q,x,ReG,N,Uf,R)
 
 ages          = size(x{1},1) - 1;
 if isequal(char(table2array(ReG(1,4))),'q')
@@ -27,9 +27,6 @@ else
 end
 
 clc;
-[~,s,~]       = svd(y*y');
-
-R             = max(sum(cumsum(diag(s))/sum(diag(s)) < (1 - 10^-8)),Z + 1);
 [U,s,v]       = svds(y,R);
 Y             = (v*s)';             
 
@@ -62,8 +59,8 @@ Psi           = sparse(diag(gamrnd(priorPsi{1},priorPsi{2})));
 T             = eye(ages);
 
 rng(0);
-IterAT        = 5000;
-BurnIn        = 500;
+IterAT        = 100000;
+BurnIn        = 1000;
 for i = 1:BurnIn + IterAT
     EE        = YY - XY'*B - B'*XY + B'*XX*B;
     for j = 1:ages
@@ -103,14 +100,9 @@ for i = 1:BurnIn + IterAT
     u(~sEL,:) = 0;
 
     u         = [b u];
-    %k         = (y - u(:,1))'*u(:,2:end);
-
     if i > BurnIn
         for j = 1:size(u,2)
             beta{j}(:,i - BurnIn) = u(:,j);
         end
-        %K = [K;k];
-    else
-        %K = [];
     end
 end
